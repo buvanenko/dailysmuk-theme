@@ -1,5 +1,7 @@
 
-var theme = 'https://raw.githubusercontent.com/buvanenko/dailysmuk-theme/main/xml/theme.xml'
+
+var main_url = 'https://raw.githubusercontent.com/buvanenko/dailysmuk-theme/main/'
+var theme = main_url+'xml/theme.xml'
 
 function loadXMLDoc(fragment=null)
 {

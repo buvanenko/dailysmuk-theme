@@ -7,9 +7,18 @@
     <!-- 2022-02-15  23:31:32 -->
 
     <script type="text/javascript" src="loadxmldoc.js"></script>
-</head>
-<body onload='document.write(loadXMLDoc());'>
 
+</head>
+
+<body onload='document.write(loadXMLDoc());'>
+    <b:if cond='!data:view.isLayoutMode'>
+        <script type="text/javascript">
+            document.write(loadXMLDoc(main_url+'xml/skin.xml'));
+        </script>
+    </b:if>
+    <script type="text/javascript">
+        document.write(loadXMLDoc(main_url+'xml/template-skin.xml'));
+    </script>
 </body>
 
 </html>
