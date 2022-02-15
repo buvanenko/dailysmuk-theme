@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<![CDATA[
+
+/*
+	<Variable 	name="messages.viewAll"
+				description="View All"
+				type="string"
+				default="View All &gt;"
+				
+				hideEditor="true"
+
+	 value="View All &gt;"/>
+
+	<Variable 	name="messages.loadMore"
+				description="Load More Text"
+				type="string"
+				default="load more"
+				
+				hideEditor="true"
+
+	 value="Показать больше"/>
+	<Variable 	name="messages.comments"
+				description="Comments Text"
+				type="string"
+				default="comments"
+				
+				hideEditor="true"
+	 value="comments"/>
+
+	<Variable 	name="messages.followByEmail"
+				description="subscribe"
+				type="string"
+				default="subscribe"
+				
+				hideEditor="true"
+	 value="subscribe"/>
+
+	<Variable 	name="messages.noMorePosts"
+				description="noMorePosts"
+				type="string"
+				default="no more posts"
+				
+				hideEditor="true"
+	 value="Загружено много постов"/>
+
+	<Variable 	name="messages.reactionSearch"
+				description="reactionSearch"
+				type="string"
+				default="Showing posts with the Reaction"
+				
+				hideEditor="true"
+	 value="Showing posts with the Reaction"/>
+
+
+<!--bloggerVars-->
+
+<Group description="Main colors">
+	<Variable name="body.link.color" description="Main color" type="color" default="#44d1da" value="#FFFFFF"/>
+	<Variable name="body.BG" description="Body Background Color" type="color" default="#141b21" value="#fff1ff"/>
+</Group>
+<Group description="Main fonts">
+	<Variable name="hFont" description="Post Heading Font" type="font" default="normal bold 100% Consolas" value="normal normal 100% Roboto"/>
+	<Variable name="bodyFont" description="Text Font" type="font" default="normal normal 18px Open Sans" value="normal normal 18px Roboto"/>
+	<Variable name="blockTitleFont" description="Block Titles/Widgets Font" type="font" default="normal normal 100% Consolas" value="normal normal 100% Roboto"/>
+	<Variable name="navFont" description="Top Nav Font" type="font" default="normal normal 16px Consolas" value="normal normal 16px Roboto"/>
+	<Variable name="dataFont" description="Data Font" type="font" default="normal normal 18px Open Sans" value="normal normal 18px Roboto"/>
+	<Variable name="postLabelFont" description="Post Label Font(Above Post Title)" type="font" default="normal bold 100% Open Sans" value="normal normal 100% Roboto"/>
+	<Variable name="tagCloudFont" description="Tag/Label Cloud Font" type="font" default="normal normal 18px Open Sans" value="normal normal 18px Roboto"/>
+</Group>
+<Group description="Font sizes">
+	<Variable name="body.fontSize" description="Body font size" type="length" default="16px" min="10px" max="100px" value="18px"/>
+	<Variable name="postBody.fontSize" description="Post body font size " type="length" default="18px" min="10px" max="100px" value="18px"/>
+	<Variable name="data.fontSize" description="Data font size" type="length" default="12px" min="10px" max="100px" value="12px"/>
+	<Variable name="h1.fontSize" description="H1 font size" type="length" default="76px" min="10px" max="100px" value="50px"/>
+	<Variable name="h2.fontSize" description="H2 font size" type="length" default="47px" min="10px" max="100px" value="32px"/>
+	<Variable name="h3.fontSize" description="H3 font size" type="length" default="29px" min="10px" max="100px" value="28px"/>
+	<Variable name="h4.fontSize" description="H4 font size" type="length" default="18px" min="10px" max="100px" value="18px"/>
+	<Variable name="h5.fontSize" description="H5 font size" type="length" default="18px" min="10px" max="100px" value="18px"/>
+	<Variable name="h6.fontSize" description="H6 font size" type="length" default="18px" min="10px" max="100px" value="18px"/>
+</Group>
+<Group description="Text colors">
+	<Variable name="typo.heading.fontClr" description="Heading" type="color" default="#ffffff" value="#000000"/>
+	<Variable name="body.text.color" description="Normal text" type="color" default="#b9bbbc" value="#000000"/>
+	<Variable name="typo.data.fontClr" description="Data text" type="color" default="#72767a" value="#000000"/>
+	<Variable name="typo.link.fontClr" description="Links" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(body.link.color.red)" green="$(body.link.color.green)" blue="$(body.link.color.blue)" alpha="$(body.link.color.alpha)" value="#E1BEE7"/>
+</Group>
+<Group description="Footer text colors">
+	<Variable name="footer.typo.heading.fontClr" description="Heading" type="color" default="#ffffff" value="#000000"/>
+	<Variable name="footer.body.text.color" description="Normal text" type="color" default="#bbbdbf" value="#000000"/>
+	<Variable name="footer.typo.data.fontClr" description="Data text" type="color" default="#8d9295" value="#000000"/>
+	<Variable name="footer.typo.link.fontClr" description="Links" type="color" default="#c5c8ce" value="#BA67C8"/>
+</Group>
+<Group description="Sliding sidebar text colors">
+	<Variable name="slidingSidebar.typo.heading.clr" description="Heading" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(footer.typo.heading.fontClr.red)" green="$(footer.typo.heading.fontClr.green)" blue="$(footer.typo.heading.fontClr.blue)" alpha="$(footer.typo.heading.fontClr.alpha)" value="#000000"/>
+	<Variable name="slidingSidebar.body.text.color" description="Normal text" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(footer.body.text.color.red)" green="$(footer.body.text.color.green)" blue="$(footer.body.text.color.blue)" alpha="$(footer.body.text.color.alpha)" value="#000000"/>
+	<Variable name="slidingSidebar.typo.data.fontClr" description="Data text" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(footer.typo.data.fontClr.red)" green="$(footer.typo.data.fontClr.green)" blue="$(footer.typo.data.fontClr.blue)" alpha="$(footer.typo.data.fontClr.alpha)" value="#000000"/>
+	<Variable name="slidingSidebar.typo.link.fontClr" description="Links" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(footer.typo.link.fontClr.red)" green="$(footer.typo.link.fontClr.green)" blue="$(footer.typo.link.fontClr.blue)" alpha="$(footer.typo.link.fontClr.alpha)" value="#000000"/>
+</Group>
+<Group description="Text colors on images">
+	<Variable name="imgBG.typo.heading.fontClr" description="Heading" type="color" default="#FFFFFF" value="#FFFFFF"/>
+	<Variable name="imgBG.body.text.color" description="Normal text" type="color" default="#e8e8e8" value="#FFFFFF"/>
+	<Variable name="imgBG.typo.data.fontClr" description="Data text" type="color" default="#e6e6e6" value="#FFFFFF"/>
+	<Variable name="imgBG.typo.link.fontClr" description="Links" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(body.link.color.red)" green="$(body.link.color.green)" blue="$(body.link.color.blue)" alpha="$(body.link.color.alpha)" value="#7BAAF7"/>
+</Group>
+<Group description="Logo">
+	<Variable name="logo.imgHeight" description="Image Height" type="length" default="28px" min="20px" max="200px" value="60px"/>
+	<Variable name="logo.title.txtClr" description="Text color" type="color" default="#ffffff" value="#000000"/>
+	<Variable name="logo.title.fontSize" description="Logo font size" type="length" default="30px" min="10px" max="100px" value="25px"/>
+	<Variable name="logo.marginTop" description="Logo Margin Top" type="length" default="0px" min="0px" max="100px" value="0px"/>
+	<Variable name="logo.marginRight" description="Logo Margin Right" type="length" default="0px" min="0px" max="100px" value="0px"/>
+	<Variable name="logo.marginBottom" description="Logo Margin Bottom" type="length" default="0px" min="0px" max="100px" value="0px"/>
+	<Variable name="logo.marginLeft" description="Logo Margin Left" type="length" default="0px" min="0px" max="100px" value="0px"/>
+</Group>
+<Group description="Header">
+	<Variable name="header.BG" description="Background" type="color" default="#ffffff" value="#fff1ff"/>
+	<Variable name="header.marginBottom" description="Margin Bottom in Home Page" type="length" default="0px" min="0px" max="200px" value="0px"/>
+	<Variable name="header.marginBottom.single" description="Margin Bottom in Post/Single Pages" type="length" default="70px" min="0px" max="200px" value="22px"/>
+</Group>
+<Group description="Header Top">
+	<Variable name="headerTop.BG" description="Background" type="color" default="#141b21" red="$(header.BG.red)" green="$(header.BG.green)" blue="$(header.BG.blue)" alpha="$(header.BG.alpha)" value="#fff1ff"/>
+	<Variable name="headerTop.topPadding" description="Top Padding" type="length" default="15px" min="0px" max="100px" value="20px"/>
+	<Variable name="headerTop.bottomPadding" description="Bottom Padding" type="length" default="15px" min="0px" max="100px" value="20px"/>
+	<Variable name="headerTop.borderTopWidth" description="Top Border Width" type="length" default="0px" min="0px" max="10px" value="0px"/>
+	<Variable name="headerTop.borderBottomWidth" description="Bottom Border Width" type="length" default="1px" min="0px" max="10px" value="0px"/>
+	<Variable name="headerTop.borderTopBottomClr" description="Top and Bottom Border Color" type="color" default="#1f2a33" value="transparent"/>
+</Group>
+<Group description="Header Bottom">
+	<Variable name="headerBottom.BG" description="Background" type="color" default="transparent" value="#121212"/>
+	<Variable name="headerBottom.topPadding" description="Top Padding" type="length" default="0px" min="0px" max="100px" value="0px"/>
+	<Variable name="headerBottom.bottomPadding" description="Bottom Padding" type="length" default="0px" min="0px" max="100px" value="0px"/>
+	<Variable name="headerBottom.borderTopWidth" description="Top Border Width" type="length" default="0px" min="0px" max="10px" value="0px"/>
+	<Variable name="headerBottom.borderBottomWidth" description="Bottom Border Width" type="length" default="0px" min="0px" max="10px" value="0px"/>
+	<Variable name="headerBottom.borderTopBottomClr" description="Top and Bottom Border Color" type="color" default="#eeeeee" value="#eeeeee"/>
+	<Variable name="headerBottomInner.BG" description="Inner Background" type="color" default="transparent" value="transparent"/>
+	<Variable name="headerBottomInner.paddingRightLeft" description="Inner Left and Right Padding" type="length" default="0px" min="0px" max="100px" value="0px"/>
+	<Variable name="headerBottomInner.borderTopBottomWidth" description="Inner Top and Bottom Border Width" type="length" default="0px" min="0px" max="10px" value="0px"/>
+	<Variable name="headerBottomInner.borderRightLeftWidth" description="Inner Left and Right Border Width" type="length" default="0px" min="0px" max="10px" value="0px"/>
+	<Variable name="headerBottomInner.borderClr" description="Inner Border Color" type="color" default="#eeeeee" value="#eeeeee"/>
+	<Variable name="headerBottom.hideShowOnMob" description="Hide/Show on Mobile" type="length" default="1px" min="0px" max="100px" value="1px"/>
+</Group>
+<Group description="Top Navbar">
+	<Variable name="nav.txtClr" description="Text Color" type="color" default="#ffffff" value="#000000"/>
+	<Variable name="nav.fontSize" description="Font Size" type="length" default="14px" min="10px" max="50px" value="15px"/>
+	<Variable name="nav.letterSpacing" description="Letter Spacing" type="length" default="1px" min="0px" max="10px" value="0px"/>
+	<Variable name="nav.txtTrans" description="Text Transform (none/capitalize/uppercase)" type="length" default="2px" min="0px" max="2px" value="0px"/>
+	<Variable name="mainMenu.leftPadding" description="Left padding" type="length" default="0px" min="0px" max="200px" value="0px"/>
+	<Variable name="mainMenu.rightPadding" description="Right padding" type="length" default="0px" min="0px" max="200px" value="0px"/>
+	<Variable name="mainMenu.spacing" description="Spacing Between Elements" type="length" default="5px" min="0px" max="100px" value="5px"/>
+	<Variable name="mainMenu.sup.clr" description="Link Sup Text Color" type="color" default="#FFFFFF" value="#FFFFFF"/>
+	<Variable name="mainMenu.sup.BG" description="Link Sup Background Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(body.link.color.red)" green="$(body.link.color.green)" blue="$(body.link.color.blue)" alpha="$(body.link.color.alpha)" value="rgba($(red), $(green), $(blue), $(alpha))"/>
+	<Variable name="mainMenu.sup.borderRadius" description="Border Radius" type="length" default="5px" min="0px" max="200px" value="5px"/>
+</Group>
+<Group description="Header Icons">
+	<Variable name="nav.iconSize" description="Icons Size" type="length" default="15px" min="10px" max="80px" value="20px"/>
+	<Variable name="nav.iconClr" description="Icons Color (Search/Menu)" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(nav.txtClr.red)" green="$(nav.txtClr.green)" blue="$(nav.txtClr.blue)" alpha="$(nav.txtClr.alpha)" value="#000000"/>
+</Group>
+<Group description="Header Dropdowns">
+	<Variable name="nav.dropDown.BG" description="Dropdown background" type="color" default="#1b242b" value="#ffedff"/>
+	<Variable name="nav.dropDown.txtColor" description="Dropdown Text Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(nav.txtClr.red)" green="$(nav.txtClr.green)" blue="$(nav.txtClr.blue)" alpha="$(nav.txtClr.alpha)" value="#000000"/>
+	<Variable name="nav.dropDown.boxShadow" description="Dropdown Box Shadow Color" type="color" default="#000000" value="#FFFFFF"/>
+</Group>
+<Group description="Post Summary">
+	<Variable name="postTitle.clr" description="Post Tilte Text Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(typo.heading.fontClr.red)" green="$(typo.heading.fontClr.green)" blue="$(typo.heading.fontClr.blue)" alpha="$(typo.heading.fontClr.alpha)" value="#000000"/>
+	<Variable name="postTitle.fontSize" description="Post Tilte Font Size" type="length" default="20px" min="0px" max="50px" value="20px"/>
+	<Variable name="postTitle.fontSizeTab" description="Post Tilte Font Size(Tablet)" type="length" default="23px" min="0px" max="50px" value="19px"/>
+	<Variable name="postTitle.fontSizeMob" description="Post Tilte Font Size(Mobile)" type="length" default="23px" min="0px" max="50px" value="18px"/>
+	<Variable name="postSnippet.clr" description="Post Snippet Text Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(body.text.color.red)" green="$(body.text.color.green)" blue="$(body.text.color.blue)" alpha="$(body.text.color.alpha)" value="rgba($(red), $(green), $(blue), $(alpha))"/>
+	<Variable name="postSnippet.fontSize" description="Post Snippet Font Size" type="length" default="16px" min="0px" max="50px" value="15px"/>
+	<Variable name="postData.clr" description="Post Data Text Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(typo.data.fontClr.red)" green="$(typo.data.fontClr.green)" blue="$(typo.data.fontClr.blue)" alpha="$(typo.data.fontClr.alpha)" value="#000000"/>
+	<Variable name="postData.fontSize" description="Post Data Font Size" type="length" default="12px" min="0px" max="50px" value="10px"/>
+	<Variable name="postData.letterSpacing" description="Post Data Letter Spacing" type="length" default="1px" min="0px" max="10px" value="1px"/>
+	<Variable name="postData.txtTransform" description="Post Data Text Transform (none/capitalize/uppercase)" type="length" default="2px" min="0px" max="2px" value="0px"/>
+	<Variable name="postLabel.clr" description="Post Label Text Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(body.link.color.red)" green="$(body.link.color.green)" blue="$(body.link.color.blue)" alpha="$(body.link.color.alpha)" value="#000000"/>
+	<Variable name="postLabel.fontSize" description="Post Label Font Size" type="length" default="10px" min="0px" max="50px" value="10px"/>
+	<Variable name="postLabel.BG" description="Post Label Background Color" type="color" default="transparent" value="transparent"/>
+	<Variable name="postLabel.padding" description="Post Label Padding" type="length" default="0px" min="0px" max="50px" value="0px"/>
+	<Variable name="postLabel.borderRadius" description="Post Label Border Radius" type="length" default="0px" min="0px" max="20px" value="0px"/>
+</Group>
+<Group description="Post Summary With Image Background">
+	<Variable name="imgBG.postTitle.clr" description="Post Tilte Text Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(imgBG.typo.heading.fontClr.red)" green="$(imgBG.typo.heading.fontClr.green)" blue="$(imgBG.typo.heading.fontClr.blue)" alpha="$(imgBG.typo.heading.fontClr.alpha)" value="#FFFFFF"/>
+	<Variable name="imgBG.postSnippet.clr" description="Post Snippet Text Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(imgBG.body.text.color.red)" green="$(imgBG.body.text.color.green)" blue="$(imgBG.body.text.color.blue)" alpha="$(imgBG.body.text.color.alpha)" value="#FFFFFF"/>
+	<Variable name="imgBG.postData.clr" description="Post Data Text Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(imgBG.typo.data.fontClr.red)" green="$(imgBG.typo.data.fontClr.green)" blue="$(imgBG.typo.data.fontClr.blue)" alpha="$(imgBG.typo.data.fontClr.alpha)" value="#FFFFFF"/>
+	<Variable name="imgBG.postLabel.clr" description="Post Label Text Color" type="color" default="#ffffff" red="$(body.link.color.red)" green="$(body.link.color.green)" blue="$(body.link.color.blue)" alpha="$(body.link.color.alpha)" value="#EEEEEE"/>
+	<Variable name="imgBG.postLabel.BG" description="Post Label Background Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(body.link.color.red)" green="$(body.link.color.green)" blue="$(body.link.color.blue)" alpha="$(body.link.color.alpha)" value="transparent"/>
+	<Variable name="imgBG.postLabel.padding" description="Post Label Padding" type="length" default="4px" min="0px" max="50px" value="0px"/>
+	<Variable name="imgBG.postLabel.borderRadius" description="Post Label Border Radius" type="length" default="0px" min="0px" max="20px" value="0px"/>
+</Group>
+<Group description="Load more button (main content)" selector=".loadMore__btn">
+	<Variable name="blogPager.marginTop" description="Margin Top" type="length" default="65px" min="0px" max="150px" value="25px"/>
+	<Variable name="blogPager.btn.BG" description="Background" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(body.link.color.red)" green="$(body.link.color.green)" blue="$(body.link.color.blue)" alpha="$(body.link.color.alpha)" value="transparent"/>
+	<Variable name="blogPager.btn.clr" description="Text color" type="color" default="#FFFFFF" value="#FFFFFF"/>
+	<Variable name="blogPager.btn.fontSize" description="Font Size" type="length" default="13px" min="10px" max="50px" value="15px"/>
+	<Variable name="blogPager.btn.paddingTopBottom" description="Padding Top/Bottom" type="length" default="12px" min="0px" max="100px" value="15px"/>
+	<Variable name="blogPager.btn.paddingLeftRight" description="Padding Left/Right" type="length" default="50px" min="0px" max="100px" value="15px"/>
+	<Variable name="blogPager.btn.borderWidth" description="Border Width" type="length" default="1px" min="0px" max="10px" value="1px"/>
+	<Variable name="blogPager.btn.borderColor" description="Border Color" type="color" default="transparent" value="#FFFFFF"/>
+	<Variable name="blogPager.btn.borderRadius" description="Border Radius" type="length" default="15px" min="0px" max="50px" value="8px"/>
+	<Variable name="blogPager.btn.letterSpacing" description="Letter Spacing" type="length" default="1px" min="0px" max="10px" value="0px"/>
+	<Variable name="blogPager.btn.txtTransform" description="Text Transform (none/capitalize/uppercase)" type="length" default="2px" min="0px" max="2px" value="0px"/>
+</Group>
+<Group description="Single Post Page">
+	<Variable name="post.title.clr" description="Post Title Text Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(typo.heading.fontClr.red)" green="$(typo.heading.fontClr.green)" blue="$(typo.heading.fontClr.blue)" alpha="$(typo.heading.fontClr.alpha)" value="#FFFFFF"/>
+	<Variable name="post.title.fontSize" description="Post Title Font Size" type="length" default="32px" min="10px" max="100px" value="25px"/>
+	<Variable name="post.data.clr" description="Post Data Text Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(typo.data.fontClr.red)" green="$(typo.data.fontClr.green)" blue="$(typo.data.fontClr.blue)" alpha="$(typo.data.fontClr.alpha)" value="#FFFFFF"/>
+	<Variable name="post.data.fontSize" description="Post Data Font Size" type="length" default="13px" min="10px" max="100px" value="15px"/>
+	<Variable name="post.title.marginBottom" description="Post Title Bottom Margin" type="length" default="25px" min="10px" max="100px" value="25px"/>
+	<Variable name="post.header.marginBottom" description="Space Between Post Header and Content" type="length" default="40px" min="10px" max="100px" value="25px"/>
+</Group>
+<Group description="Single Post Labels">
+	<Variable name="post.labels.clr" description="Post Lables Text Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(typo.data.fontClr.red)" green="$(typo.data.fontClr.green)" blue="$(typo.data.fontClr.blue)" alpha="$(typo.data.fontClr.alpha)" value="#9E9E9E"/>
+	<Variable name="post.labels.fontSize" description="Post Lables Font Size" type="length" default="11px" min="10px" max="100px" value="13px"/>
+	<Variable name="post.labels.BG" description="Post Lables Background Color" type="color" default="transparent" value="transparent"/>
+	<Variable name="post.labels.paddingTopBottom" description="Post Lables Padding Top/Bottom" type="length" default="10px" min="0px" max="20px" value="10px"/>
+	<Variable name="post.labels.spacing" description="Post Lables Spacing" type="length" default="8px" min="0px" max="20px" value="10px"/>
+	<Variable name="post.labels.paddingLeftRight" description="Post Lables Padding Left/Right" type="length" default="20px" min="0px" max="20px" value="20px"/>
+	<Variable name="post.labels.boderWidth" description="Post Lables Border Width" type="length" default="2px" min="0px" max="10px" value="1px"/>
+	<Variable name="post.labels.borderClr" description="Post Lables Border Color" type="color" default="#212c34" red="$(typo.data.fontClr.red)" green="$(typo.data.fontClr.green)" blue="$(typo.data.fontClr.blue)" alpha="$(typo.data.fontClr.alpha)" value="#9E9E9E"/>
+	<Variable name="post.labels.boderRadius" description="Post Lables Border Radius" type="length" default="20px" min="0px" max="20px" value="15px"/>
+	<Variable name="post.labels.letterSpacing" description="Post Lables Letter Spacing" type="length" default="1px" min="0px" max="10px" value="1px"/>
+</Group>
+<Group description="Single Post Share Buttons">
+	<Variable name="shareButtons.BG" description="Share Buttons Background Color" type="color" default="transparent" value="transparent"/>
+	<Variable name="shareButtons.icons.clr" description="Share Buttons Icons Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(body.link.color.red)" green="$(body.link.color.green)" blue="$(body.link.color.blue)" alpha="$(body.link.color.alpha)" value="#9E9E9E"/>
+	<Variable name="shareButtons.icons.size" description="Share Buttons Icon Size" type="length" default="14px" min="0px" max="50px" value="20px"/>
+	<Variable name="shareButtons.paddingTopBottom" description="Share Buttons Padding Top/Bottom" type="length" default="12px" min="0px" max="50px" value="15px"/>
+	<Variable name="shareButtons.paddingLeftRight" description="Share Buttons Padding Left/Right" type="length" default="12px" min="0px" max="50px" value="15px"/>
+	<Variable name="shareButtons.spacing" description="Share Buttons Spacing" type="length" default="8px" min="0px" max="50px" value="10px"/>
+	<Variable name="shareButtons.borderWidth" description="Share Buttons Border Width" type="length" default="2px" min="0px" max="10px" value="1px"/>
+	<Variable name="shareButtons.borderClr" description="Share Buttons Border Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(body.link.color.red)" green="$(body.link.color.green)" blue="$(body.link.color.blue)" alpha="$(body.link.color.alpha)" value="#9E9E9E"/>
+	<Variable name="shareButtons.borderRadius" description="Share Buttons Border Radius" type="length" default="100px" min="0px" max="100px" value="15px"/>
+</Group>
+<Group description="Slidingsidebar" selector=".slidingSidebar">
+	<Variable name="slidingSidebar.BG" description="Background" type="color" default="#141b21" value="#f5fcff"/>
+	<Variable name="slidingSidebar.loc" description="Sliding Sidebar Location (Left/Right)" type="length" default="2px" min="1px" max="2px" value="2px"/>
+</Group>
+<Group description="Footer" selector="footer">
+	<Variable name="footerTop.BG" description="Footer top background" type="color" default="#1b242b" value="#ffedff"/>
+	<Variable name="footerTop.paddingTopBottom" description="Footer Top Padding Top and Bottom" type="length" default="100px" min="0px" max="200px" value="100px"/>
+	<Variable name="footerTop.borderWidth" description="Footer Top Border Top Width" type="length" default="0px" min="0px" max="10px" value="0px"/>
+	<Variable name="footerTop.borderClr" description="Footer Top Border Top Color" type="color" default="#0c0c0c" value="transparent"/>
+	<Variable name="footerBottom.BG" description="Footer bottom background" type="color" default="#1b242b" value="#fff1ff"/>
+	<Variable name="footerBottom.paddingTopBottom" description="Footer Bottm Padding Top and Bottom" type="length" default="30px" min="0px" max="200px" value="30px"/>
+	<Variable name="footerBottom.borderWidth" description="Footer Bottom Border Top Width" type="length" default="1px" min="0px" max="10px" value="0px"/>
+	<Variable name="footerBottom.borderClr" description="Footer Bottom Border Top Color" type="color" default="#1f2a33" value="transparent"/>
+	<Variable name="footerTop.maxColumnWidth" description="Footer Max Column Width" type="length" default="500px" min="200px" max="1200px" value="500px"/>
+</Group>
+<Group description="Forms">
+	<Variable name="textField.BG" description="Text Field Background" type="color" default="transparent" value="transparent"/>
+	<Variable name="textField.clr" description="Text Field Font Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(body.text.color.red)" green="$(body.text.color.green)" blue="$(body.text.color.blue)" alpha="$(body.text.color.alpha)" value="#FFFFFF"/>
+	<Variable name="textField.borderWidth" description="Text Field Border Width" type="length" default="1px" min="0px" max="10px" value="1px"/>
+	<Variable name="textField.borderClr" description="Text Field Border Color" type="color" default="#272d32" value="#EEEEEE"/>
+	<Variable name="textField.borderRadius" description="Text Field Border Radius" type="length" default="5px" min="0px" max="50px" value="8px"/>
+	<Variable name="textField.height" description="Text Field Height" type="length" default="45px" min="10px" max="100px" value="45px"/>
+	<Variable name="button.BG" description="Button Background" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(body.link.color.red)" green="$(body.link.color.green)" blue="$(body.link.color.blue)" alpha="$(body.link.color.alpha)" value="#EEEEEE"/>
+	<Variable name="button.clr" description="Button Font Color" type="color" default="#FFFFFF" value="#FFFFFF"/>
+	<Variable name="button.borderWidth" description="Button Border Width" type="length" default="0px" min="0px" max="10px" value="0px"/>
+	<Variable name="button.borderClr" description="Button Border Color" type="color" default="transparent" value="transparent"/>
+	<Variable name="button.borderRadius" description="Button Border Radius" type="length" default="5px" min="0px" max="50px" value="5px"/>
+	<Variable name="button.height" description="Button Height" type="length" default="45px" min="10px" max="100px" value="45px"/>
+</Group>
+<Group description="Forms in footer" selector="footer">
+	<Variable name="footer.textField.BG" description="Text Field Background" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(textField.BG.red)" green="$(textField.BG.green)" blue="$(textField.BG.blue)" alpha="$(textField.BG.alpha)" value="rgba($(red), $(green), $(blue), $(alpha))"/>
+	<Variable name="footer.textField.clr" description="Text Field Font Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(footer.body.text.color.red)" green="$(footer.body.text.color.green)" blue="$(footer.body.text.color.blue)" alpha="$(footer.body.text.color.alpha)" value="#000000"/>
+	<Variable name="footer.textField.borderClr" description="Text Field Border Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(textField.borderClr.red)" green="$(textField.borderClr.green)" blue="$(textField.borderClr.blue)" alpha="$(textField.borderClr.alpha)" value="rgba($(red), $(green), $(blue), $(alpha))"/>
+	<Variable name="footer.button.BG" description="Button Background" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(body.link.color.red)" green="$(body.link.color.green)" blue="$(body.link.color.blue)" alpha="$(body.link.color.alpha)" value="rgba($(red), $(green), $(blue), $(alpha))"/>
+	<Variable name="footer.button.clr" description="Button Font Color" type="color" default="#FFFFFF" value="#9E9E9E"/>
+	<Variable name="footer.button.borderClr" description="Button Border Color" type="color" default="transparent" value="transparent"/>
+</Group>
+<Group description="Forms in the sliding sidebar" selector=".slidingSidebar">
+	<Variable name="slidingSidebar.textField.BG" description="Text Field Background" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(textField.BG.red)" green="$(textField.BG.green)" blue="$(textField.BG.blue)" alpha="$(textField.BG.alpha)" value="transparent"/>
+	<Variable name="slidingSidebar.textField.clr" description="Text Field Font Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(footer.body.text.color.red)" green="$(footer.body.text.color.green)" blue="$(footer.body.text.color.blue)" alpha="$(footer.body.text.color.alpha)" value="#000000"/>
+	<Variable name="slidingSidebar.textField.borderClr" description="Text Field Border Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(textField.borderClr.red)" green="$(textField.borderClr.green)" blue="$(textField.borderClr.blue)" alpha="$(textField.borderClr.alpha)" value="#d9f5ff"/>
+	<Variable name="slidingSidebar.button.BG" description="Button Background" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(body.link.color.red)" green="$(body.link.color.green)" blue="$(body.link.color.blue)" alpha="$(body.link.color.alpha)" value="#7BAAF7"/>
+	<Variable name="slidingSidebar.button.clr" description="Button Font Color" type="color" default="#FFFFFF" value="#FFFFFF"/>
+	<Variable name="slidingSidebar.button.borderClr" description="Button Border Color" type="color" default="transparent" value="transparent"/>
+</Group>
+<Group description="popular Posts Widget">
+	<Variable name="popularPosts.title.fontSize" description="Posts Title Font Size" type="length" default="16px" min="10px" max="30px" value="15px"/>
+	<Variable name="popularPosts.count.clr" description="Posts Count Text Color" type="color" default="#FFFFFF" value="#000000"/>
+	<Variable name="popularPosts.count.fontSize" description="Posts Count Font Size" type="length" default="12px" min="5px" max="30px" value="12px"/>
+	<Variable name="popularPosts.count.BG" description="Posts Count Background Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(body.link.color.red)" green="$(body.link.color.green)" blue="$(body.link.color.blue)" alpha="$(body.link.color.alpha)" value="#f5fcff"/>
+	<Variable name="popularPosts.count.borderRadius" description="Posts Count Border Radius" type="length" default="100px" min="0px" max="100px" value="100px"/>
+	<Variable name="popularPosts.count.width" description="Posts Count Width" type="length" default="25px" min="10px" max="100px" value="25px"/>
+	<Variable name="popularPosts.count.height" description="Posts Count Height" type="length" default="25px" min="10px" max="100px" value="25px"/>
+</Group>
+<Group description="Label Cloud Widget">
+	<Variable name="labelCloud.clr" description="Text Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(body.text.color.red)" green="$(body.text.color.green)" blue="$(body.text.color.blue)" alpha="$(body.text.color.alpha)" value="#FFFFFF"/>
+	<Variable name="labelCloud.fontSize" description="Font Size" type="length" default="13px" min="10px" max="30px" value="13px"/>
+	<Variable name="labelCloud.BG" description="Background Color" type="color" default="#252d34" value="#000000"/>
+	<Variable name="labelCloud.paddingTopBottom" description="Padding Top/Bottom" type="length" default="5px" min="0px" max="20px" value="5px"/>
+	<Variable name="labelCloud.paddingLeftRight" description="Padding Left/Right" type="length" default="15px" min="0px" max="20px" value="15px"/>
+	<Variable name="labelCloud.borderWidth" description="Border Width" type="length" default="0px" min="0px" max="20px" value="0px"/>
+	<Variable name="labelCloud.borderClr" description="Border Color" type="color" default="#111111" value="#111111"/>
+	<Variable name="labelCloud.borderRadius" description="Border Radius" type="length" default="50px" min="0px" max="50px" value="50px"/>
+</Group>
+<Group description="Label Cloud Widget Footer">
+	<Variable name="footer.labelCloud.clr" description="Text Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(footer.body.text.color.red)" green="$(footer.body.text.color.green)" blue="$(footer.body.text.color.blue)" alpha="$(footer.body.text.color.alpha)" value="#FFFFFF"/>
+	<Variable name="footer.labelCloud.BG" description="Background Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(labelCloud.BG.red)" green="$(labelCloud.BG.green)" blue="$(labelCloud.BG.blue)" alpha="$(labelCloud.BG.alpha)" value="#000000"/>
+	<Variable name="footer.labelCloud.borderClr" description="Border Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(labelCloud.borderClr.red)" green="$(labelCloud.borderClr.green)" blue="$(labelCloud.borderClr.blue)" alpha="$(labelCloud.borderClr.alpha)" value="rgba($(red), $(green), $(blue), $(alpha))"/>
+</Group>
+<Group description="Label Cloud Widget Sliding Sidebar">
+	<Variable name="slidingSidebar.labelCloud.clr" description="Text Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(footer.body.text.color.red)" green="$(footer.body.text.color.green)" blue="$(footer.body.text.color.blue)" alpha="$(footer.body.text.color.alpha)" value="#FFFFFF"/>
+	<Variable name="slidingSidebar.labelCloud.BG" description="Background Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(labelCloud.BG.red)" green="$(labelCloud.BG.green)" blue="$(labelCloud.BG.blue)" alpha="$(labelCloud.BG.alpha)" value="#000000"/>
+	<Variable name="slidingSidebar.labelCloud.borderClr" description="Border Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(labelCloud.borderClr.red)" green="$(labelCloud.borderClr.green)" blue="$(labelCloud.borderClr.blue)" alpha="$(labelCloud.borderClr.alpha)" value="#000000"/>
+</Group>
+<Group description="Block Title in Top Section Section">
+	<Variable name="topSectionBlockTitle.clr" description="Text Color" type="color" default="#ffffff" red="$(typo.heading.fontClr.red)" green="$(typo.heading.fontClr.green)" blue="$(typo.heading.fontClr.blue)" alpha="$(typo.heading.fontClr.alpha)" value="#FFFFFF"/>
+	<Variable name="topSectionBlockTitle.fontSize" description="Font Size" type="length" default="18px" min="10px" max="50px" value="18px"/>
+	<Variable name="topSectionBlockTitle.letterSpacing" description="Letter Spacing" type="length" default="1px" min="0" max="10px" value="1px"/>
+	<Variable name="topSectionBlockTitle.marginBottom" description="Margin Bottom" type="length" default="35px" min="0px" max="50px" value="35px"/>
+	<Variable name="topSectionBlockTitle.BG" description="Text Background" type="color" default="#1b242b" value="#000000"/>
+	<Variable name="topSectionBlockTitle.paddingTopBottom" description="Padding Top/Bottom" type="length" default="12px" min="0px" max="50px" value="12px"/>
+	<Variable name="topSectionBlockTitle.paddingLeft" description="Padding Left" type="length" default="30px" min="0px" max="50px" value="30px"/>
+	<Variable name="topSectionBlockTitle.paddingRight" description="Padding Right" type="length" default="30px" min="0px" max="50px" value="30px"/>
+	<Variable name="topSectionBlockTitle.borderWidth" description="Border Width" type="length" default="0px" min="0px" max="10px" value="0px"/>
+	<Variable name="topSectionBlockTitle.borderClr" description="Border Color" type="color" default="transparent" value="transparent"/>
+	<Variable name="topSectionBlockTitle.borderRadius" description="Border Radius" type="length" default="0px" min="0px" max="50px" value="0px"/>
+	<Variable name="topSectionBlockTitle.middleLine.width" description="Middle Line Width" type="length" default="0px" min="0px" max="10px" value="0px"/>
+	<Variable name="topSectionBlockTitle.middleLine.clr" description="Middle Line Color" type="color" default="#eeeeee" value="#eeeeee"/>
+	<Variable name="topSectionBlockTitle.txtAlignCenter" description="Text Align (none/center)" type="length" default="0px" min="0px" max="1px" value="0px"/>
+</Group>
+<Group description="Block Title in Main Content Section">
+	<Variable name="mainContentBlockTitle.clr" description="Text Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(typo.heading.fontClr.red)" green="$(typo.heading.fontClr.green)" blue="$(typo.heading.fontClr.blue)" alpha="$(typo.heading.fontClr.alpha)" value="#FFFFFF"/>
+	<Variable name="mainContentBlockTitle.fontSize" description="Font Size" type="length" default="18px" min="10px" max="50px" value="18px"/>
+	<Variable name="mainContentBlockTitle.letterSpacing" description="Letter Spacing" type="length" default="1px" min="0" max="10px" value="1px"/>
+	<Variable name="mainContentBlockTitle.marginBottom" description="Margin Bottom" type="length" default="35px" min="0px" max="50px" value="30px"/>
+	<Variable name="mainContentBlockTitle.BG" description="Text Background" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(topSectionBlockTitle.BG.red)" green="$(topSectionBlockTitle.BG.green)" blue="$(topSectionBlockTitle.BG.blue)" alpha="$(topSectionBlockTitle.BG.alpha)" value="transparent"/>
+	<Variable name="mainContentBlockTitle.paddingTopBottom" description="Padding Top/Bottom" type="length" default="12px" min="0px" max="50px" value="12px"/>
+	<Variable name="mainContentBlockTitle.paddingLeft" description="Padding Left" type="length" default="30px" min="0px" max="50px" value="30px"/>
+	<Variable name="mainContentBlockTitle.paddingRight" description="Padding Right" type="length" default="30px" min="0px" max="50px" value="30px"/>
+	<Variable name="mainContentBlockTitle.borderWidth" description="Border Width" type="length" default="0px" min="0px" max="10px" value="0px"/>
+	<Variable name="mainContentBlockTitle.borderClr" description="Border Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(topSectionBlockTitle.borderClr.red)" green="$(topSectionBlockTitle.borderClr.green)" blue="$(topSectionBlockTitle.borderClr.blue)" alpha="$(topSectionBlockTitle.borderClr.alpha)" value="transparent"/>
+	<Variable name="mainContentBlockTitle.borderRadius" description="Border Radius" type="length" default="0px" min="0px" max="50px" value="0px"/>
+	<Variable name="mainContentBlockTitle.middleLine.width" description="Middle Line Width" type="length" default="0px" min="0px" max="10px" value="0px"/>
+	<Variable name="mainContentBlockTitle.middleLine.clr" description="Middle Line Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(topSectionBlockTitle.middleLine.clr.red)" green="$(topSectionBlockTitle.middleLine.clr.green)" blue="$(topSectionBlockTitle.middleLine.clr.blue)" alpha="$(topSectionBlockTitle.middleLine.clr.alpha)" value="rgba($(red), $(green), $(blue), $(alpha))"/>
+	<Variable name="mainContentBlockTitle.txtAlignCenter" description="Text Align (none/center)" type="length" default="0px" min="0px" max="1px" value="0px"/>
+</Group>
+<Group description="Widgets Title in Sidebar">
+	<Variable name="sidebarWidgetTitle.clr" description="Text Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(typo.heading.fontClr.red)" green="$(typo.heading.fontClr.green)" blue="$(typo.heading.fontClr.blue)" alpha="$(typo.heading.fontClr.alpha)" value="#000000"/>
+	<Variable name="sidebarWidgetTitle.fontSize" description="Font Size" type="length" default="16px" min="10px" max="50px" value="15px"/>
+	<Variable name="sidebarWidgetTitle.letterSpacing" description="Letter Spacing" type="length" default="0px" min="0" max="10px" value="0px"/>
+	<Variable name="sidebarWidgetTitle.marginBottom" description="Margin Bottom" type="length" default="25px" min="0px" max="50px" value="25px"/>
+	<Variable name="sidebarWidgetTitle.BG" description="Text Background" type="color" default="transparent" value="transparent"/>
+	<Variable name="sidebarWidgetTitle.paddingTopBottom" description="Padding Top/Bottom" type="length" default="0px" min="0px" max="50px" value="12px"/>
+	<Variable name="sidebarWidgetTitle.paddingLeft" description="Padding Left" type="length" default="0px" min="0px" max="50px" value="12px"/>
+	<Variable name="sidebarWidgetTitle.paddingRight" description="Padding Right" type="length" default="0px" min="0px" max="50px" value="12px"/>
+	<Variable name="sidebarWidgetTitle.borderWidth" description="Border Width" type="length" default="0px" min="0px" max="10px" value="1px"/>
+	<Variable name="sidebarWidgetTitle.borderClr" description="Border Color" type="color" default="transparent" value="#000000"/>
+	<Variable name="sidebarWidgetTitle.borderRadius" description="Border Radius" type="length" default="0px" min="0px" max="50px" value="8px"/>
+	<Variable name="sidebarWidgetTitle.middleLine.width" description="Middle Line Width" type="length" default="0px" min="0px" max="10px" value="0px"/>
+	<Variable name="sidebarWidgetTitle.middleLine.clr" description="Middle Line Color" type="color" default="#eeeeee" value="transparent"/>
+	<Variable name="sidebarWidgetTitle.txtAlignCenter" description="Text Align (none/center)" type="length" default="0px" min="0px" max="1px" value="0px"/>
+</Group>
+<Group description="Widgets Title in Footer">
+	<Variable name="footerWidgetTitle.clr" description="Text Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(footer.typo.heading.fontClr.red)" green="$(footer.typo.heading.fontClr.green)" blue="$(footer.typo.heading.fontClr.blue)" alpha="$(footer.typo.heading.fontClr.alpha)" value="#000000"/>
+	<Variable name="footerWidgetTitle.fontSize" description="Font Size" type="length" default="16px" min="10px" max="50px" value="16px"/>
+	<Variable name="footerWidgetTitle.letterSpacing" description="Letter Spacing" type="length" default="0px" min="0" max="10px" value="0px"/>
+	<Variable name="footerWidgetTitle.marginBottom" description="Margin Bottom" type="length" default="25px" min="0px" max="50px" value="25px"/>
+	<Variable name="footerWidgetTitle.BG" description="Text Background" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(sidebarWidgetTitle.BG.red)" green="$(sidebarWidgetTitle.BG.green)" blue="$(sidebarWidgetTitle.BG.blue)" alpha="$(sidebarWidgetTitle.BG.alpha)" value="rgba($(red), $(green), $(blue), $(alpha))"/>
+	<Variable name="footerWidgetTitle.paddingTopBottom" description="Padding Top/Bottom" type="length" default="0px" min="0px" max="50px" value="0px"/>
+	<Variable name="footerWidgetTitle.paddingLeft" description="Padding Left" type="length" default="0px" min="0px" max="50px" value="0px"/>
+	<Variable name="footerWidgetTitle.paddingRight" description="Padding Right" type="length" default="0px" min="0px" max="50px" value="0px"/>
+	<Variable name="footerWidgetTitle.borderWidth" description="Border Width" type="length" default="0px" min="0px" max="10px" value="0px"/>
+	<Variable name="footerWidgetTitle.borderClr" description="Border Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(sidebarWidgetTitle.borderClr.red)" green="$(sidebarWidgetTitle.borderClr.green)" blue="$(sidebarWidgetTitle.borderClr.blue)" alpha="$(sidebarWidgetTitle.borderClr.alpha)" value="rgba($(red), $(green), $(blue), $(alpha))"/>
+	<Variable name="footerWidgetTitle.borderRadius" description="Border Radius" type="length" default="0px" min="0px" max="50px" value="0px"/>
+	<Variable name="footerWidgetTitle.middleLine.width" description="Middle Line Width" type="length" default="0px" min="0px" max="10px" value="0px"/>
+	<Variable name="footerWidgetTitle.middleLine.clr" description="Middle Line Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(sidebarWidgetTitle.middleLine.clr.red)" green="$(sidebarWidgetTitle.middleLine.clr.green)" blue="$(sidebarWidgetTitle.middleLine.clr.blue)" alpha="$(sidebarWidgetTitle.middleLine.clr.alpha)" value="rgba($(red), $(green), $(blue), $(alpha))"/>
+	<Variable name="footerWidgetTitle.txtAlignCenter" description="Text Align (none/center)" type="length" default="0px" min="0px" max="1px" value="0px"/>
+</Group>
+<Group description="Block Title in Main Sliding Sidebar">
+	<Variable name="slidingSidebarWidgetTitle.clr" description="Text Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(footer.typo.heading.fontClr.red)" green="$(footer.typo.heading.fontClr.green)" blue="$(footer.typo.heading.fontClr.blue)" alpha="$(footer.typo.heading.fontClr.alpha)" value="rgba($(red), $(green), $(blue), $(alpha))"/>
+	<Variable name="slidingSidebarWidgetTitle.fontSize" description="Font Size" type="length" default="16px" min="10px" max="50px" value="16px"/>
+	<Variable name="slidingSidebarWidgetTitle.letterSpacing" description="Letter Spacing" type="length" default="0px" min="0" max="10px" value="0px"/>
+	<Variable name="slidingSidebarWidgetTitle.marginBottom" description="Margin Bottom" type="length" default="25px" min="0px" max="50px" value="25px"/>
+	<Variable name="slidingSidebarWidgetTitle.BG" description="Text Background" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(sidebarWidgetTitle.BG.red)" green="$(sidebarWidgetTitle.BG.green)" blue="$(sidebarWidgetTitle.BG.blue)" alpha="$(sidebarWidgetTitle.BG.alpha)" value="rgba($(red), $(green), $(blue), $(alpha))"/>
+	<Variable name="slidingSidebarWidgetTitle.paddingTopBottom" description="Padding Top/Bottom" type="length" default="0px" min="0px" max="50px" value="0px"/>
+	<Variable name="slidingSidebarWidgetTitle.paddingLeft" description="Padding Left" type="length" default="0px" min="0px" max="50px" value="0px"/>
+	<Variable name="slidingSidebarWidgetTitle.paddingRight" description="Padding Right" type="length" default="0px" min="0px" max="50px" value="0px"/>
+	<Variable name="slidingSidebarWidgetTitle.borderWidth" description="Border Width" type="length" default="0px" min="0px" max="10px" value="0px"/>
+	<Variable name="slidingSidebarWidgetTitle.borderClr" description="Border Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(sidebarWidgetTitle.borderClr.red)" green="$(sidebarWidgetTitle.borderClr.green)" blue="$(sidebarWidgetTitle.borderClr.blue)" alpha="$(sidebarWidgetTitle.borderClr.alpha)" value="#000000"/>
+	<Variable name="slidingSidebarWidgetTitle.borderRadius" description="Border Radius" type="length" default="0px" min="0px" max="50px" value="0px"/>
+	<Variable name="slidingSidebarWidgetTitle.middleLine.width" description="Middle Line Width" type="length" default="0px" min="0px" max="10px" value="0px"/>
+	<Variable name="slidingSidebarWidgetTitle.middleLine.clr" description="Middle Line Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(sidebarWidgetTitle.middleLine.clr.red)" green="$(sidebarWidgetTitle.middleLine.clr.green)" blue="$(sidebarWidgetTitle.middleLine.clr.blue)" alpha="$(sidebarWidgetTitle.middleLine.clr.alpha)" value="rgba($(red), $(green), $(blue), $(alpha))"/>
+	<Variable name="slidingSidebarWidgetTitle.txtAlignCenter" description="Text Align (none/center)" type="length" default="0px" min="0px" max="1px" value="0px"/>
+</Group>
+<Group description="Related Posts Title">
+	<Variable name="relatedPostsTitle.clr" description="Text Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(typo.heading.fontClr.red)" green="$(typo.heading.fontClr.green)" blue="$(typo.heading.fontClr.blue)" alpha="$(typo.heading.fontClr.alpha)" value="rgba($(red), $(green), $(blue), $(alpha))"/>
+	<Variable name="relatedPostsTitle.fontSize" description="Font Size" type="length" default="18px" min="10px" max="50px" value="18px"/>
+	<Variable name="relatedPostsTitle.letterSpacing" description="Letter Spacing" type="length" default="0px" min="0" max="10px" value="0px"/>
+	<Variable name="relatedPostsTitle.marginBottom" description="Margin Bottom" type="length" default="35px" min="0px" max="50px" value="35px"/>
+	<Variable name="relatedPostsTitle.BG" description="Text Background" type="color" default="transparent" value="transparent"/>
+	<Variable name="relatedPostsTitle.paddingTopBottom" description="Padding Top/Bottom" type="length" default="0px" min="0px" max="50px" value="0px"/>
+	<Variable name="relatedPostsTitle.paddingLeft" description="Padding Left" type="length" default="0px" min="0px" max="50px" value="0px"/>
+	<Variable name="relatedPostsTitle.paddingRight" description="Padding Right" type="length" default="0px" min="0px" max="50px" value="0px"/>
+	<Variable name="relatedPostsTitle.borderWidth" description="Border Width" type="length" default="0px" min="0px" max="10px" value="0px"/>
+	<Variable name="relatedPostsTitle.borderClr" description="Border Color" type="color" default="transparent" value="transparent"/>
+	<Variable name="relatedPostsTitle.borderRadius" description="Border Radius" type="length" default="0px" min="0px" max="50px" value="0px"/>
+	<Variable name="relatedPostsTitle.middleLine.width" description="Middle Line Width" type="length" default="0px" min="0px" max="10px" value="0px"/>
+	<Variable name="relatedPostsTitle.middleLine.clr" description="Middle Line Color" type="color" default="#eeeeee" value="#eeeeee"/>
+	<Variable name="relatedPostsTitle.txtAlignCenter" description="Text Alignment (none/center)" type="length" default="0px" min="0px" max="1px" value="0px"/>
+</Group>
+<Group description="Comments Posts Title">
+	<Variable name="commentsTitle.clr" description="Text Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(typo.heading.fontClr.red)" green="$(typo.heading.fontClr.green)" blue="$(typo.heading.fontClr.blue)" alpha="$(typo.heading.fontClr.alpha)" value="rgba($(red), $(green), $(blue), $(alpha))"/>
+	<Variable name="commentsTitle.fontSize" description="Font Size" type="length" default="18px" min="10px" max="50px" value="20px"/>
+	<Variable name="commentsTitle.letterSpacing" description="Letter Spacing" type="length" default="0px" min="0" max="10px" value="0px"/>
+	<Variable name="commentsTitle.marginBottom" description="Margin Bottom" type="length" default="35px" min="0px" max="50px" value="35px"/>
+	<Variable name="commentsTitle.BG" description="Text Background" type="color" default="transparent" value="transparent"/>
+	<Variable name="commentsTitle.paddingTopBottom" description="Padding Top/Bottom" type="length" default="0px" min="0px" max="50px" value="0px"/>
+	<Variable name="commentsTitle.paddingLeft" description="Padding Left" type="length" default="0px" min="0px" max="50px" value="0px"/>
+	<Variable name="commentsTitle.paddingRight" description="Padding Right" type="length" default="0px" min="0px" max="50px" value="0px"/>
+	<Variable name="commentsTitle.borderWidth" description="Border Width" type="length" default="0px" min="0px" max="10px" value="0px"/>
+	<Variable name="commentsTitle.borderClr" description="Border Color" type="color" default="transparent" value="transparent"/>
+	<Variable name="commentsTitle.borderRadius" description="Border Radius" type="length" default="0px" min="0px" max="50px" value="0px"/>
+	<Variable name="commentsTitle.middleLine.width" description="Middle Line Width" type="length" default="0px" min="0px" max="10px" value="0px"/>
+	<Variable name="commentsTitle.middleLine.clr" description="Middle Line Color" type="color" default="#eeeeee" value="#9E9E9E"/>
+	<Variable name="commentsTitle.txtAlignCenter" description="Text Alignment (none/center)" type="length" default="0px" min="0px" max="1px" value="0px"/>
+</Group>
+<Group description="Titles Text Transform">
+	<Variable name="fBlockTxtTrans" description="Featured Blocks Title Text Transform(none/capitalize/uppercase)" type="length" default="2px" min="0px" max="2px" value="2px"/>
+	<Variable name="widgetsTxtTrans" description="Widgets Title Text Transform(none/capitalize/uppercase)" type="length" default="2px" min="0px" max="2px" value="2px"/>
+</Group>
+<Group description="View All Link">
+	<Variable name="viewAll.clr" description="Text Color" type="color" default="rgba($(red), $(green), $(blue), $(alpha))" red="$(typo.heading.fontClr.red)" green="$(typo.heading.fontClr.green)" blue="$(typo.heading.fontClr.blue)" alpha="$(typo.heading.fontClr.alpha)" value="rgba($(red), $(green), $(blue), $(alpha))"/>
+	<Variable name="viewAll.fontSize" description="Font Size" type="length" default="15px" min="10px" max="50px" value="15px"/>
+	<Variable name="viewAll.letterSpacing" description="Letter Spacing" type="length" default="0px" min="0" max="10px" value="0px"/>
+	<Variable name="viewAll.marginTop" description="Margin Top (When View All is at Bottom Only)" type="length" default="20px" min="0px" max="50px" value="20px"/>
+	<Variable name="viewAll.BG" description="Text Background" type="color" default="transparent" value="transparent"/>
+	<Variable name="viewAll.paddingTopBottom" description="Padding Top/Bottom" type="length" default="0" min="0px" max="50px" value="0"/>
+	<Variable name="viewAll.paddingLeft" description="Padding Left" type="length" default="0" min="0px" max="50px" value="0"/>
+	<Variable name="viewAll.paddingRight" description="Padding Right" type="length" default="0" min="0px" max="50px" value="0"/>
+	<Variable name="viewAll.borderWidth" description="Border Width" type="length" default="0" min="0px" max="10px" value="0"/>
+	<Variable name="viewAll.borderClr" description="Border Color" type="color" default="transparent" value="transparent"/>
+	<Variable name="viewAll.borderRadius" description="Border Radius" type="length" default="0" min="0px" max="50px" value="0"/>
+</Group>
+<Group description="White Spaces in Top Section">
+	<Variable name="topSection.blcksSpace" description="Space Between Blocks" type="length" default="70px" min="0px" max="200px" value="25px"/>
+	<Variable name="topSection.secSpace" description="Space Between Top Sections (Full Width and Boxed)" type="length" default="80px" min="0px" max="200px" value="25px"/>
+</Group>
+<Group description="White Spaces in Main Content Section">
+	<Variable name="mainContent.topSpace" description="Top Space(in Home and Search Pages)" type="length" default="100px" min="0px" max="200px" value="0px"/>
+	<Variable name="mainContent.bottomSpace" description="Bottom Space" type="length" default="100px" min="0px" max="200px" value="10px"/>
+	<Variable name="mainContent.blcksSpace" description="Space Between Blocks" type="length" default="70px" min="0px" max="200px" value="20px"/>
+</Group>
+<Group description="Header Layouts">
+	<Variable name="headerPosition" description="Header Position (Static/Sticky/Floating)" type="length" default="2px" min="1px" max="3px" value="3px"/>
+	<Variable name="applyHeaderPosTo" description="Apply Header Position To Header(top/bottom/both)" type="length" default="3px" min="1px" max="3px" value="3px"/>
+</Group>
+<Group description="Mega Menu Layouts">
+	<Variable name="megaMenu.showLabel" description="Hide/Show Post Label" type="length" default="1px" min="0px" max="0px" value="1px"/>
+	<Variable name="megaMenu.showComments" description="Hide/Show Post Comments Number" type="length" default="1px" min="0px" max="0px" value="0px"/>
+	<Variable name="megaMenu.showTime" description="Hide/Show Post Time" type="length" default="1px" min="0px" max="0px" value="1px"/>
+</Group>
+<Group description="Posts Summary Layout">
+	<Variable name="PostStyle" description="Post Style" type="length" default="2px" min="1px" max="3px" value="3px"/>
+	<Variable name="PostsColNDesktop" description="Posts Per Row on Desktop" type="length" default="2px" min="1px" max="5px" value="3px"/>
+	<Variable name="PostsColNTablet" description="Posts Per Row on Tablets" type="length" default="2px" min="1px" max="5px" value="2px"/>
+	<Variable name="PostsColNMobile" description="Posts Per Row on Mobiles" type="length" default="1px" min="1px" max="5px" value="1px"/>
+	<Variable name="postImgH" description="Post Image Height(Small/Large/Extra Large/Original)" type="length" default="1px" min="1px" max="4px" value="2px"/>
+	<Variable name="postCenterContentV" description="Post Center Content Vertically" type="length" default="0px" min="0px" max="1px" value="0px"/>
+	<Variable name="postCenterContentH" description="Post Center Content Horizontally" type="length" default="0px" min="0px" max="1px" value="0px"/>
+	<Variable name="postSummary.margin.v" description="Post Margin Top and Bottom" type="length" default="30px" min="0px" max="80px" value="10px"/>
+	<Variable name="postSummary.margin.h" description="Post Margin Right and Left" type="length" default="15px" min="0px" max="80px" value="10px"/>
+	<Variable name="blogPagerStyle" description="Regular Pager / Load More" type="length" default="2px" min="1px" max="3px" value="1px"/>
+	<Variable name="showPostLabel" description="Hide/Show Post Label" type="length" default="1px" min="0px" max="1px" value="1px"/>
+	<Variable name="sumShowPostAuthor" description="Hide/Show Post Author" type="length" default="1px" min="0px" max="1px" value="0px"/>
+	<Variable name="sumShowPostTime" description="Hide/Show Post Time" type="length" default="1px" min="0px" max="1px" value="0px"/>
+	<Variable name="sumShowPostComments" description="Hide/Show Post Comments Number" type="length" default="1px" min="0px" max="1px" value="0px"/>
+	<Variable name="showThumbReactions" description="Hide/Show Post Reactions" type="length" default="1px" min="0px" max="1px" hideEditor="true" value="0px"/>
+	<Variable name="showPostSummary" description="Hide/Show Post Summary" type="length" default="1px" min="0px" max="1px" value="0px"/>
+</Group>
+<Group description="Single Post Layout">
+	<Variable name="post.maxWidth" description="Post Max Width" type="length" default="800px" min="400px" max="12000px" value="1920px"/>
+	<Variable name="showPostAuthor" description="Hide/Show Post Author" type="length" default="0px" min="0px" max="1px" value="0px"/>
+	<Variable name="showPostTime" description="Hide/Show Post Time" type="length" default="1px" min="0px" max="1px" value="0px"/>
+	<Variable name="showPostComments" description="Hide/Show Post Comments Number" type="length" default="1px" min="0px" max="1px" value="0px"/>
+	<Variable name="showPostReactions" description="Hide/Show Post Reactions" type="length" default="0px" min="0px" max="1px" hideEditor="true" value="0px"/>
+</Group>
+<Group description="Sidebar Layout">
+	<Variable name="showSidebar.home" description="Hide/Show Sidebar on Home Page" type="length" default="1px" min="0px" max="1px" value="0px"/>
+	<Variable name="showSidebar.post" description="Hide/Show Sidebar on Post Page" type="length" default="1px" min="0px" max="1px" value="1px"/>
+	<Variable name="stickySidebar" description="Sticky Sidebar (no/yes)" type="length" default="0px" min="0px" max="1px" value="1px"/>
+</Group>
+<Group description="Sliding Sidebar Layout">
+	<Variable name="showSlidingSidebar" description="Hide/Show Sliding Sidebar" type="length" default="1px" min="0px" max="1px" value="0px"/>
+</Group>
+<Group description="Footer Layout">
+	<Variable name="showFooter" description="Hide/Show Top Footer" type="length" default="1px" min="0px" max="1px" value="0px"/>
+	<Variable name="footerColsN" description="Number of Columns in The Top Footer" type="length" default="3px" min="1px" max="4px" value="1px"/>
+</Group>
+<Group description="Popular Posts Layouts">
+	<Variable name="popularPostsStyle" description="Popular Posts Style" type="length" default="1px" min="1px" max="2px" value="2px"/>
+	<Variable name="popularPostsShowCounter" description="Hide/Show Posts Count" type="length" default="0px" min="0px" max="1px" value="0px"/>
+</Group>
+<Group description="Featured Blocks Post Title: xLarge" selector=".c-resPost-lg">
+	<Variable name="fpTitle.fontSize.lg" description="Post width 993px or More" type="length" default="40px" min="10px" max="80px" value="40px"/>
+</Group>
+<Group description="Featured Blocks Post Title Large" selector=".c-resPost-md">
+	<Variable name="fpTitle.fontSize.md" description="Post width 769px-992px" type="length" default="32px" min="10px" max="60px" value="32px"/>
+</Group>
+<Group description="Featured Blocks Post Title Medium" selector=".c-resPost-sm">
+	<Variable name="fpTitle.fontSize.sm" description="Post width 577px-768px" type="length" default="26px" min="10px" max="50px" value="26px"/>
+</Group>
+<Group description="Featured Blocks Post Title Small" selector=".c-resPost-xs">
+	<Variable name="fpTitle.fontSize.xs" description="Post width 401px-576px" type="length" default="18px" min="10px" max="40px" value="18px"/>
+</Group>
+<Group description="Featured Blocks Post Title xSmall" selector=".c-resPost-400">
+	<Variable name="fpTitle.fontSize.xxs" description="Post width 251px-400px" type="length" default="16px" min="10px" max="30px" value="16px"/>
+</Group>
+<Group description="Featured Blocks Post Title xxSmall" selector=".c-resPost-250">
+	<Variable name="fpTitle.fontSize.xxxs" description="Post width 250px or Less" type="length" default="14px" min="10px" max="20px" value="14px"/>
+</Group>
+<Group description="Block Preloader Colors">
+	<Variable name="blkPreLoader.clr1" description="Block Preloader Color 1" type="color" default="#11171c" value="#000000"/>
+	<Variable name="blkPreLoader.clr2" description="Block Preloader Color 2" type="color" default="#10161b" value="#000000"/>
+</Group>
+
+
+<!--/bloggerVars-->
+
+
+<Variable name="posts.background.color" description="Form background color -"
+		type="color"
+		default="transparent"	 hideEditor="true" value="transparent"/>
+
+
+<Variable name="body.text.font" description="Font"
+		type="font"
+		default="normal 18px 'Open Sans', sans-serif" hideEditor="true" value="normal 18px &#39;Open Sans&#39;, sans-serif"/>
+
+<Variable name="body.background" description="Background"
+		color="#eeeeee"
+		type="background"
+		default="$(color) none repeat scroll top left"	 hideEditor="true" value="#eeeeee url(none) no-repeat scroll top center /* Credit: Michael Elkan (http://www.offset.com/photos/394244) */"/>
+
+<Variable name="tabs.font" description="Font2"
+		type="font"
+		family="$(bodyFont.family)"
+		default="normal 18px $(family), sans-serif" hideEditor="true"  value="normal 18px $(family), sans-serif"/>
+
+<Variable name="tabs.overflow.background.color" description="Popup background color"
+		type="color"
+		default="$(posts.background.color)"	 hideEditor="true"  value="#ffffff"/>
+
+<Variable name="posts.title.color" description="Post title color (X)"
+		type="color"
+		default="$(typo.heading.fontClr)"	hideEditor="true"  value="#ffffff"/>
+
+<Variable name="posts.text.color" description="Post text color"
+			type="color"
+			default="$(body.text.color)" hideEditor="true"  value="#b9bbbc"/>
+<Variable name="posts.icons.color"
+		description="Post icons color"
+		type="color"
+		default="$(typo.data.fontClr)" hideEditor="true"  value="#72767a"/>
+
+<Variable name="labels.background.color"
+		description="Label background color"
+		type="color"
+		default="$(typo.data.fontClr)" hideEditor="true"  value="#72767a"/>
+
+
+<Variable	name="reservedLabelsPrefix"
+			description="Reactions Prefix"
+			type="string"
+			default=""
+			  value="__"/>
+
+*/
+
+@media only screen and (min-width:1200px){.container{max-width:1200px}}.all,body,html{width:100%;height:100%}body{background-color:$(body.BG);overflow-anchor:none}.article,body{font:$(bodyFont);color:$(body.text.color);font-size:$(body.fontSize);line-height:1.7;margin:auto}.text{color:$(body.text.color)}.slider .aPost{line-height:1.7}img{max-width:100%;height:auto}.title,h1,h2,h3,h4,h5,h6{font:$(hFont);color:$(typo.heading.fontClr)!important;line-height:1.4}.blockTitle{font:$(blockTitleFont)}.mainMenuList .mainMenuList__link__txt{font:$(navFont)}.footer,.footer .text{color:$(footer.body.text.color)}.footer .title,.footer h1,.footer h2,.footer h3,.footer h4,.footer h5,.footer h6{color:$(footer.typo.heading.fontClr)!important}.slidingSidebar,.slidingSidebar .text{color:$(slidingSidebar.body.text.color)!important}.slidingSidebar .title,.slidingSidebar h1,.slidingSidebar h2,.slidingSidebar h3,.slidingSidebar h4,.slidingSidebar h5,.slidingSidebar h6{color:$(slidingSidebar.typo.heading.clr)!important}.h1,h1{font-size:$(h1.fontSize);margin-top:23px;margin-bottom:46px;line-height:1.21052632em}.h2,h2{font-size:$(h2.fontSize);margin-top:23px;margin-bottom:23px;line-height:1.46808511em}.h3,h3{font-size:$(h3.fontSize);margin-top:23px;margin-bottom:10px;line-height:1.5862069em}.h4,h4{font-size:$(h4.fontSize);margin-top:23px;margin-bottom:5px;line-height:1.27777778em}.h5,h5{font-size:$(h5.fontSize);margin-top:23px;margin-bottom:0;margin-top:1.27777778em}.h6,h6{font-size:$(h6.fontSize);margin-top:23px;margin-bottom:0;margin-top:1.27777778em}ol,ul{padding-inline-start:40px;-webkit-padding-start:40px;-moz-padding-start:40px}ol,p,pre,table,ul{margin-top:0;margin-bottom:23px}ol ol,ol ul,ul ol,ul ul{margin-top:0;margin-bottom:0}blockquote{margin:0;margin:50px;font-size:120%;position:relative}blockquote:after,blockquote:before{display:block;font-size:150%;line-height:1;position:absolute}blockquote:before{content:open-quote;top:-10px;left:-30px}blockquote:after{content:close-quote;bottom:-10px;right:-30px}.hr,hr{border:1px solid;margin:-1px 0}sub,sup{line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}input,textarea{outline:0;color:inherit}::-webkit-input-placeholder{color:inherit;opacity:.5}::-moz-placeholder{color:inherit;opacity:.5}:-ms-input-placeholder{color:inherit;opacity:.5}::-ms-input-placeholder{color:inherit;opacity:.5}::placeholder{color:inherit;opacity:.5}a{color:$(body.link.color);text-decoration:none;transition:all .3s ease;-webkit-transition:all .3s ease;-moz-transition:all .3s ease;-o-transition:all .3s ease}a:hover{color:$(body.link.color)}a:focus{outline:0}.footer a{color:$(footer.typo.link.fontClr)}.footer a:hover{color:$(footer.typo.link.fontClr)}.slidingSidebar a{color:$(slidingSidebar.typo.link.fontClr)}.slidingSidebar a:hover{color:$(slidingSidebar.typo.link.fontClr)}.largeLetter{font-size:430%;display:inline-block;float:left;line-height:.9;margin:5px 8px 2px 0}.rmListStyle{list-style:none;padding:0;margin:0}.listSpacing>li{padding-bottom:18px;line-height:1}.listSpacing>li:last-child{padding-bottom:0}.icon{width:25px;height:25px;display:block}.overlay{position:absolute;z-index:1000;top:0;right:0;bottom:0;left:0;background-color:#000;opacity:0;visibility:hidden;transition:all .3s ease;-webkit-transition:all .3s ease;-moz-transition:all .3s ease;-o-transition:all .3s ease}.boxShadow{-webkit-box-shadow:0 2px 12px -8px $(nav.dropDown.boxShadow);box-shadow:0 2px 12px -8px $(nav.dropDown.boxShadow)}.transition{-webkit-transition:all .3s ease;-o-transition:all .3s ease;transition:all .3s ease}.hide{display:none}.all{position:relative;z-index:1000}.fullWidth{width:100%}.BG{z-index:1;position:absolute;top:0;left:0;right:0;bottom:0;background-size:cover;background-position:center}.sidebarOpened.navFixedToTop .floatingNav{position:static}.centerHV{position:absolute;z-index:1000;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.vAligMiddle{display:inline-block;vertical-align:middle}.data{font:$(dataFont);color:$(typo.data.fontClr)!important;font-size:$(data.fontSize);letter-spacing:$(postData.letterSpacing);line-height:1;margin-top:-10px}.postData__txtTransform__cap .data{text-transform:capitalize}.postData__txtTransform__up .data{text-transform:uppercase}.data__part{display:inline-block;vertical-align:middle;margin-top:10px}.data__part:after{content:'-';display:inline-block;margin:0 5px;font-size:135%;line-height:0;opacity:.5}.data__part:last-child:after{display:none}.data__separtator{padding:0 5px}.data .icon{fill:$(typo.data.fontClr);width:$(data.fontSize);height:$(data.fontSize)}.footer .data{color:$(footer.typo.data.fontClr)!important}.footer .data .icon{fill:$(footer.typo.data.fontClr)}.slidingSidebar .data{color:$(slidingSidebar.typo.data.fontClr)!important}.slidingSidebar .data .icon{fill:$(slidingSidebar.typo.data.fontClr)}.imgBG .data{color:$(imgBG.postData.clr)!important}.imgBG .data .icon{fill:$(imgBG.postData.clr)}.fullWH{position:absolute;z-index:100;width:100%;height:100%;left:0;top:0}.overlayN:after{content:"";position:absolute;z-index:100;top:0;right:0;bottom:0;left:0;background-color:#000;opacity:0;visibility:hidden;transition:all .3s ease;-webkit-transition:all .3s ease;-moz-transition:all .3s ease;-o-transition:all .3s ease}.overlayN:hover:after{opacity:.1;visibility:visible}.postTitle{margin:0}.blogPosts .postTitle{font-size:$(postTitle.fontSize)!important}@media (max-width:991.98px){.blogPosts .postTitle{font-size:$(postTitle.fontSizeTab)!important}}@media (max-width:575.98px){.blogPosts .postTitle{font-size:$(postTitle.fontSizeMob)!important}}.postLabelCont+.postTitle:before{content:'';display:block;height:.7em;max-height:22px;min-height:12px}.postTitle:after{content:'';display:block;height:.5em;max-height:18px;min-height:12px}.postTitle__link,.postTitle__link:hover{color:$(postTitle.clr);font-size:inherit;display:block}.postSnippet{color:$(postSnippet.clr);font-size:$(postSnippet.fontSize);margin:20px 0 0 0}.postThumb{display:block;position:relative;padding-top:65%}.thumbWrapper{position:relative}.postLabelCont{line-height:1}.postLabel{font:$(postLabelFont);color:$(postLabel.clr);font-size:$(postLabel.fontSize);background-color:$(postLabel.BG);padding:$(postLabel.padding);border-radius:$(postLabel.borderRadius);display:inline-block;text-transform:uppercase;letter-spacing:1px}.postLabel:hover{color:$(postLabel.clr)}.postCard__postThumb{margin-bottom:20px}.postCard__postSummary{margin-bottom:0;margin-top:20px}@media (max-width:767.98px){.postHCard__postThumb{margin-bottom:20px}}.imgBG .postTitle__link,.imgBG .postTitle__link:hover{color:$(imgBG.postTitle.clr);font-size:inherit;display:block}.imgBG .postSnippet{color:$(imgBG.postSnippet.clr)}.imgBG .postLabelCont{line-height:1}.imgBG .postLabel{color:$(imgBG.postLabel.clr);background-color:$(imgBG.postLabel.BG);padding:$(imgBG.postLabel.padding);border-radius:$(imgBG.postLabel.borderRadius)}img.lazyload,img.lazyloading{-webkit-filter:blur(150px);filter:blur(150px);opacity:.6;-o-object-fit:cover;object-fit:cover;transition:filter .4s,-webkit-filter .4s}img.lazyloaded{-webkit-filter:blur(0);filter:blur(0);opacity:1;transition:filter .4s,-webkit-filter .4s}.postThumb{overflow:hidden;background-color:#000}.postThumb__img{-o-object-fit:cover;object-fit:cover}.previewOnly{display:none}.preview .previewOnly{display:block}.objectFitNoSupport .postThumb__img{position:absolute;top:50%;left:50%;width:100%;height:auto;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.objectFitNoSupport .objectFitH{width:auto;height:100%}.txtField{font-size:70%;padding:0 15px;border-style:solid;overflow:auto;background-color:$(textField.BG);color:$(textField.clr);border-width:$(textField.borderWidth);border-color:$(textField.borderClr);border-radius:$(textField.borderRadius);height:$(textField.height)}.txtArea{height:auto;padding:15px}.btn{font-size:70%;cursor:pointer;display:block;text-align:center;font-weight:700;letter-spacing:2px;text-transform:uppercase;background-color:$(button.BG);color:$(button.clr);border:$(button.borderWidth) solid $(button.borderClr);border-radius:$(button.borderRadius);height:$(button.height)}.footer .txtField{background-color:$(footer.textField.BG);color:$(footer.textField.clr);border-color:$(footer.textField.borderClr)}.footer .btn{background-color:$(footer.button.BG);color:$(footer.button.clr);border-color:$(footer.button.borderClr)}.slidingSidebar .txtField{background-color:$(slidingSidebar.textField.BG);color:$(slidingSidebar.textField.clr);border-color:$(slidingSidebar.textField.borderClr)}.slidingSidebar .btn{background-color:$(slidingSidebar.button.BG);color:$(slidingSidebar.button.clr);border-color:$(slidingSidebar.button.borderClr)}.header{z-index:1000000}.home .header,.home .header+.nav__rep{margin-bottom:$(header.marginBottom)}.single .header,.single .header+.nav__rep{margin-bottom:$(header.marginBottom.single)}.header .widget{margin-bottom:0}.header .widget__title{display:none}.header__inner{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.header__sec{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.header__leftSec,.header__rightSec{-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.header__leftSec{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}.header__rightSec{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}.header__middleSec{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}@media (max-width:575.98px){.header__inner{-ms-flex-wrap:wrap;flex-wrap:wrap}.header__middleSec{-webkit-box-ordinal-group:1;-ms-flex-order:0;order:0;width:100%}.header__leftSec,.header__rightSec{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}}.no-items+.header__sec{-ms-flex-preferred-size:auto;flex-basis:auto}body#layout .header__sec.no-items{display:initial}.headerTop{background-color:$(headerTop.BG);padding:$(headerTop.topPadding) 0 $(headerTop.bottomPadding) 0;border-style:solid;border-width:$(headerTop.borderTopWidth) 0 $(headerTop.borderBottomWidth) 0;border-color:$(headerTop.borderTopBottomClr)}.headerBottom{background-color:$(headerBottom.BG);border-style:solid;border-width:$(headerBottom.borderTopWidth) 0 $(headerBottom.borderBottomWidth) 0;border-color:$(headerBottom.borderTopBottomClr)}.headerBottom .header__inner{padding:$(headerBottom.topPadding) $(headerBottomInner.paddingRightLeft) $(headerBottom.bottomPadding) $(headerBottomInner.paddingRightLeft);background-color:$(headerBottomInner.BG);border-style:solid;border-width:$(headerBottomInner.borderTopBottomWidth) $(headerBottomInner.borderRightLeftWidth);border-color:$(headerBottomInner.borderClr)}.widget.Header{margin-top:$(logo.marginTop);margin-right:$(logo.marginRight);margin-bottom:$(logo.marginBottom)!important;margin-left:$(logo.marginLeft)}.logo{min-height:30px;white-space:nowrap}.logo__h{margin:0;line-height:1;font:$(hFont);font-size:$(logo.title.fontSize)}.logo__title{color:$(logo.title.txtClr)!important;font-size:$(logo.title.fontSize);text-transform:uppercase;text-decoration:none}.logo__img{display:block;height:$(logo.imgHeight);max-width:initial}.nav__icon{display:block;border-radius:100px;position:relative;z-index:100000;padding:10px}.logoCon .nav__icon{padding:10px 14px}.nav__icon>svg{width:$(nav.iconSize);height:$(nav.iconSize);fill:$(nav.iconClr);display:block}.header .SocialButtons svg{width:$(nav.iconSize);height:$(nav.iconSize)}.openCloseMod.open>.nav__icon{background-color:rgba(150,150,150,.2)}.header .nav__dropDown{position:absolute;left:0;top:100%;z-index:1000000;background-color:$(nav.dropDown.BG);color:$(nav.dropDown.txtColor)}.nav__shadow{-webkit-box-shadow:0 2px 10px -1px $(nav.dropDown.boxShadow);box-shadow:0 2px 10px -1px $(nav.dropDown.boxShadow)}.header .PageList .widget__title{display:none}.header .mainMenuCon{padding-left:$(mainMenu.leftPadding);padding-right:$(mainMenu.rightPadding)}.header .mainMenuList{margin:0 $(-1 * mainMenu.spacing);-ms-flex-align:center!important;-webkit-box-align:center!important;align-items:center!important;display:-ms-flexbox!important;display:-webkit-box!important;display:flex!important}.header .mainMenuList__element{position:relative;margin:0 $(mainMenu.spacing);letter-spacing:$(nav.letterSpacing)}.header .mainMenuList__dropDown{display:block;opacity:0;visibility:hidden;padding:20px;width:220px;top:80%}.header .mainMenuList__element:hover>.mainMenuList__dropDown{opacity:1;visibility:visible;top:100%}.nav__txtTransform__cap .mainMenuList__link__txt{text-transform:capitalize}.nav__txtTransform__up .mainMenuList__link__txt{text-transform:uppercase}.header .mainMenuList__link{padding:10px 8px;white-space:nowrap}.header .mainMenuList__link .mainMenuList__link__txt{color:$(nav.txtClr)!important;font-size:$(nav.fontSize);letter-spacing:$(nav.letterSpacing)}.header .mainMenuList__link:hover{color:$(nav.txtClr)!important}.header .mainMenuList__dropDown .mainMenuList__link__txt{color:$(nav.dropDown.txtColor)!important}.mainMenuList__link sup{display:inline-block;background:$(mainMenu.sup.BG);color:$(mainMenu.sup.clr);padding:3px 4px;margin:0 4px;border-radius:$(mainMenu.sup.borderRadius);line-height:1;top:-.75em;font-size:70%;letter-spacing:1px}.mainMenuList__dropDownIcon,.mainMenuList__link__txt{display:inline-block;vertical-align:middle}.mainMenuList__dropDownIcon{padding:7px 4px 4px 4px}.mainMenuList__dropDownIcon .icon{width:10px;height:10px}.header .mainMenuList__dropDownIcon .icon{fill:$(nav.txtClr)!important}.mainMenuListWrapper .widget__title{display:none}.slidingSidebar .mainMenuListWrapper{display:none}.slidingSidebar .mainMenuList__mega .mainMenuList__dropDownIcon,.slidingSidebar .mainMenuList__mega .mainMenuList__megaContent{display:none!important}@media (max-width:991px){.header .slidingSidebar__icon{display:block!important}.header .PageList{display:none}.slidingSidebar .mainMenuListWrapper{display:block}.slidingSidebar .mainMenuList__element:hover>.mainMenuList__dropDown{display:none}.slidingSidebar .mainMenuList__element:hover.mainMenuList__dropDown__open>.mainMenuList__dropDown{display:block}.headerBottom__hideMob .headerBottom{display:none}}.searchIconCont{position:relative}.openCloseMod{position:relative;overflow:hidden}.openCloseMod__ele{opacity:0;visibility:hidden}.openCloseMod.open .openCloseMod__ele{opacity:1;visibility:visible}.mainMenuList__link.openCloseMod__icon{padding:0;-webkit-transition:none;-o-transition:none;transition:none}.openCloseMod__right .openCloseMod__ele{left:auto;right:0}.nav__searchFormCont{padding:8px;left:auto;right:0}.openCloseMod__left .nav__searchFormCont{left:0;right:auto}.nav__searchForm__input{display:block;border:0;width:220px;padding:0 15px;font-size:70%;width:230px;height:40px;background-color:transparent}.nav__searchFormCont_2{top:50%!important;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);padding:5px}.nav__searchFormCont_2 .nav__searchForm__input{border:1px solid $(nav.txtClr)}.openCloseMod__right .nav__searchFormCont_2{right:50%!important}.openCloseMod__right.openCloseMod.open .nav__searchFormCont_2{right:100%!important}.openCloseMod__left .nav__searchFormCont_2{right:auto;left:50%!important}.openCloseMod__left.openCloseMod.open .nav__searchFormCont_2{left:100%!important}.nav__socialCont{padding:10px}.socialMediaIconCont .widget__title{display:none}.nav__socialCont .SocialButtons{width:-webkit-max-content;width:-moz-max-content;width:max-content}.mainMenuList__mega{position:static!important}.header{position:relative}.mainMenuList__megaContent{position:absolute;z-index:10000;left:0;right:0;opacity:0;visibility:hidden;margin-top:-10px;background-color:$(nav.dropDown.BG);padding:30px 30px;pointer-events:none}.mainMenuList__mega:hover .mainMenuList__megaContent{margin-top:0;opacity:1;visibility:visible;pointer-events:initial}.megaMenu__hideLabel .mainMenuList__mega .postLabelCont{display:none}.megaMenu__hideComments .mainMenuList__mega .data__comments,.megaMenu__hideComments .mainMenuList__mega .data__time:after{display:none}.megaMenu__hideTime .mainMenuList__mega .data__time{display:none}.nav__rep{display:none;width:100%}.nav_moved+.nav__rep{display:block}.nav_floating .nav_moved,.nav_sticky .nav_moved{position:fixed;top:0;left:0;right:0;z-index:10000000}.mainContent{padding:$(mainContent.topSpace) 0 $(mainContent.bottomSpace) 0;overflow-anchor:none}.single .mainContent{padding-top:0}#mainContent__featured .widget,#mainContent__featured .widget:last-child{margin-bottom:$(mainContent.blcksSpace)}.mainFeed{padding-right:50px}.sidebar{padding-left:0}.noSidebar .mainFeed,.noSidebar .sidebar{padding-left:15px;padding-right:15px}@media (max-width:991.98px){.sidebar{padding-left:15px;margin-top:60px}.mainFeed{padding-right:15px}}.posts__blockTitle{margin-bottom:0!important}.blogPosts{margin:$(-1 * postSummary.margin.v) $(-1 * postSummary.margin.h)!important}.blogPosts-1col-lg .layout__unit{width:100%}.blogPosts-2col-lg .layout__unit{width:50%}.blogPosts-3col-lg .layout__unit{width:33.3333333%}.blogPosts-4col-lg .layout__unit{width:25%}.blogPosts-5col-lg .layout__unit{width:20%}@media (max-width:991.98px){.blogPosts-1col-md .layout__unit{width:100%}.blogPosts-2col-md .layout__unit{width:50%}.blogPosts-3col-md .layout__unit{width:33.3333333%}.blogPosts-4col-md .layout__unit{width:25%}.blogPosts-5col-md .layout__unit{width:20%}}@media (max-width:575.98px){.blogPosts-1col-sm .layout__unit{width:100%}.blogPosts-2col-sm .layout__unit{width:50%}.blogPosts-3col-sm .layout__unit{width:33.3333333%}.blogPosts-4col-sm .layout__unit{width:25%}.blogPosts-5col-sm .layout__unit{width:20%}}.blogPager{margin-top:$(blogPager.marginTop)}.blogPager.noPosts{display:none}.blogPager__btn{display:block;font-weight:700;background-color:$(blogPager.btn.BG)!important;color:$(blogPager.btn.clr)!important;font-size:$(blogPager.btn.fontSize);padding:$(blogPager.btn.paddingTopBottom) $(blogPager.btn.paddingLeftRight);border-style:solid;border-width:$(blogPager.btn.borderWidth);border-color:$(blogPager.btn.borderColor);border-radius:$(blogPager.btn.borderRadius);letter-spacing:$(blogPager.btn.letterSpacing)}.blogPager__btn__txtTransform__cap .blogPager__btn{text-transform:capitalize}.blogPager__btn__txtTransform__up .blogPager__btn{text-transform:uppercase}.blogPager__placeHolder{width:10px;height:10px;opacity:0;visibility:hidden}.blogPager__noMorePost,.loadMoreBtn__loader{display:none}.loadMoreBtn__loading .loadMoreBtn__loader{display:block}.blogPager.noMorePosts .loadMoreBtn{display:none}.blogPager.noMorePosts .blogPager__noMorePost{display:block}.loadMoreBtn__loading .loadMoreBtn__txt{opacity:0;visibility:hidden}.loadMoreBtn{position:relative}.loadMoreBtn__loader{position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.loader__dot{display:block;width:4px;height:4px;background-color:$(blogPager.btn.clr);border-radius:1000px;margin:7px;opacity:.5;-webkit-animation-duration:1.2s;animation-duration:1.2s;-webkit-animation-name:dotOpacity;animation-name:dotOpacity;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-direction:normal;animation-direction:normal;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out}.loader__dot:nth-child(2){-webkit-animation-delay:.4s;animation-delay:.4s}.loader__dot:nth-child(3){-webkit-animation-delay:.8s;animation-delay:.8s}@-webkit-keyframes dotOpacity{0%{opacity:.5}16.6667%{opacity:1}33.333%{opacity:.5}100%{opacity:.5}}@keyframes dotOpacity{0%{opacity:.5}16.6667%{opacity:1}33.333%{opacity:.5}100%{opacity:.5}}.search-label,.search-query{font-weight:700}.mainContent__msg{margin-bottom:30px;font-size:115%}._404{text-align:center}._404__title{margin-top:0;margin-bottom:30px}#HTML2{margin-bottom:0}.topSection__Cont{padding-top:$(topSection.secSpace)}.topSection .widget{margin-bottom:$(topSection.blcksSpace)}.topSection .section.no-items{display:none}.topSection__FW.no-items~.container .topSection__Cont{padding-top:0}.footer{overflow:hidden}.footerTop{background-color:$(footerTop.BG);padding:$(footerTop.paddingTopBottom) 0;border-top-style:solid;border-top-width:$(footerTop.borderWidth);border-top-color:$(footerTop.borderClr)}.footerTop .footerCol{max-width:$(footerTop.maxColumnWidth)}.footerBottom .widget{max-width:450px;margin:0 auto 40px auto}.footerTop__alignCenter{text-align:center}.footerBottom{background-color:$(footerBottom.BG);padding:$(footerBottom.paddingTopBottom) 0;border-top-style:solid;border-top-width:$(footerBottom.borderWidth);border-top-color:$(footerBottom.borderClr)}.footerBottom{text-align:center}.footerBottom .SocialButtons{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.footerBottom #Text1{font-size:12px}.footerBottom .blockTitle{display:none}.footerTop .col{padding-left:25px;padding-right:25px;min-width:300px;margin-top:30px;margin-bottom:30px}.footerTop .row{margin-left:-25px;margin-right:-25px;margin-top:-30px;margin-bottom:-30px}.slidingSidebar{width:450px;max-width:100%;position:fixed;top:0;left:-450px;z-index:100000000000000;padding:80px;height:100%;background-color:$(slidingSidebar.BG);overflow-y:auto;overflow-x:hidden}.slidingSidebar__icon__hide .slidingSidebar__icon{display:none}.slidingSidebar__show .slidingSidebar{left:0}.body__overlay{position:fixed;z-index:100000000;opacity:0;visibility:hidden}.slidingSidebar__show .body__overlay{opacity:.35;visibility:visible}.slidingSidebar__closeIcon{cursor:pointer;position:absolute;top:20px;right:20px;padding:5px}.slidingSidebar__closeIcon .icon{width:16px;height:16px;fill:$(slidingSidebar.typo.heading.clr)}.slidingSidebar__loc__right .slidingSidebar{right:-450px;left:auto}.slidingSidebar__loc__right.slidingSidebar__show .slidingSidebar{right:0}#slidingSidebar__loc{width:$(slidingSidebar.loc)}.slidingSidebar::-webkit-scrollbar-track{border-radius:0;background-color:rgba(255,255,255,.1)}.slidingSidebar::-webkit-scrollbar{width:3px;background-color:transparent}.slidingSidebar::-webkit-scrollbar-thumb{border-radius:2px;background-color:rgba(255,255,255,.25)}.slidingSidebar__hide{display:none}@media (max-width:575.98px){.slidingSidebar{width:350px;padding:40px}}.widget{margin-bottom:60px}#sidebar_sec>div:last-child:after{content:'-';display:block;height:0;opacity:0}.widget:last-child{margin-bottom:0}.labelList__link{color:$(typo.heading.fontClr)!important;display:block;text-transform:capitalize}.labelList__count{font-size:80%}.footer .labelList__link{color:$(footer.typo.heading.fontClr)!important}.slidingSidebar .labelList__link{color:$(slidingSidebar.typo.heading.clr)!important}.labelCloud{font-size:0;margin:-5px}.labelCloud__link{font:$(tagCloudFont);display:inline-block;color:$(labelCloud.clr)!important;background-color:$(labelCloud.BG);font-size:$(labelCloud.fontSize);padding:$(labelCloud.paddingTopBottom) $(labelCloud.paddingLeftRight);border-width:$(labelCloud.borderWidth);border-color:$(labelCloud.borderClr);border-style:solid;border-radius:$(labelCloud.borderRadius);text-transform:uppercase;margin:5px}.labelCloud__count{font-size:$(labelCloud.fontSize - 1px)}.footer .labelCloud__link{color:$(footer.labelCloud.clr)!important;background-color:$(footer.labelCloud.BG);border-color:$(footer.labelCloud.borderClr)}.slidingSidebar .labelCloud__link{color:$(slidingSidebar.labelCloud.clr)!important;background-color:$(slidingSidebar.labelCloud.BG);border-color:$(slidingSidebar.labelCloud.borderClr)}.FollowByEmail form{margin:-10px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}.FollowByEmail__input,.FollowByEmail__submit{margin:10px;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.FollowByEmail__input{min-width:275px}.FollowByEmail__submit{min-width:140px}.BlogArchive .hierarchy{list-style:none}.BlogArchive .widget__content>.hierarchy{padding:0;margin:0}.hierarchy__hierarchyTitleIcon{width:12px;height:12px}.archive__interval,.archive__intervalName,.archive__postCount{display:inline-block;vertical-align:middle}.hierarchy__posts{margin:20px 0}.hierarchy__post:after{margin-top:10px;margin-bottom:15px;content:"";display:block;width:100%;height:1px;opacity:.5}.hierarchy__post:last-child:after{display:none}.BlogArchive a.text,.hierarchy__hierarchyTitleIcon{color:$(body.text.color)!important;fill:$(body.text.color)}.footer .BlogArchive a.text,.footer .hierarchy__hierarchyTitleIcon{color:$(footer.body.text.color)!important;fill:$(footer.body.text.color)}.slidingSidebar .BlogArchive a.text,.slidingSidebar hierarchy__hierarchyTitleIcon{color:$(slidingSidebar.body.text.color)!important;fill:$(slidingSidebar.body.text.color)}.aPopularPost{display:block;margin-bottom:30px;position:relative}.aPopularPost:last-child{margin-bottom:0}.aPopularPost__titleLink{display:block}.aPopularPost__title{margin:0;font-size:$(popularPosts.title.fontSize)}.aPopularPost__snippet{margin-top:10px;margin-bottom:0}.popularPost1 .aPopularPost__content{padding-left:20px}.popularPost1 .aPopularPost__postThumb{padding-top:80%}.PopularPosts.showCounter{counter-reset:aPopularPost;position:relative}.showCounter .aPopularPost::after{counter-increment:aPopularPost;content:counter(aPopularPost);display:block;width:$(popularPosts.count.width);height:$(popularPosts.count.height);font-size:$(popularPosts.count.fontSize);color:$(popularPosts.count.clr);background-color:$(popularPosts.count.BG);text-align:center;border-radius:$(popularPosts.count.borderRadius);position:absolute;width:$(popularPosts.count.width);height:$(popularPosts.count.height);line-height:$(popularPosts.count.height);top:-10px;left:-10px;z-index:100}.popularPost2 .aPopularPost__postThumb{padding-top:50%}.popularPost2 .aPopularPost__content{margin-top:10px}.featuredPost{display:block}.featuredPost__titleLink{display:block}.featuredPost__title{margin:0}.featuredPost__snippet{margin-top:10px;margin-bottom:0}.featuredPost__title{font-size:18px;margin-top:15px}.contactForm input,.contactForm textarea{width:100%}.contactForm__row{display:block;margin-bottom:20px}.contact-form-cross{display:none}.ContactForm .contact-form-button.contact-form-button-submit{font-size:70%;cursor:pointer;display:block;text-align:center;font-weight:700;letter-spacing:2px;text-transform:uppercase;background-color:$(button.BG);color:$(button.clr);border:$(button.borderWidth) solid $(button.borderClr);border-radius:$(button.borderRadius);height:$(button.height)}.footer .ContactForm .contact-form-button.contact-form-button-submit{background-color:$(footer.button.BG);color:$(footer.button.clr);border-color:$(footer.button.borderClr)}.slidingSidebar .ContactForm .contact-form-button.contact-form-button-submit{background-color:$(slidingSidebar.button.BG);color:$(slidingSidebar.button.clr);border-color:$(slidingSidebar.button.borderClr)}.BlogSearch input{width:100%;min-width:220px}.imgWidget__caption{margin-top:20px}.LinkList__link{display:block}.LinkList__link{color:$(typo.heading.fontClr)!important}.footer .LinkList__link{color:$(footer.typo.heading.fontClr)!important}.slidingSidebar .LinkList__link{color:$(slidingSidebar.typo.heading.clr)!important}.mainMenuList__element{display:block;line-height:1;margin:0 0 10px 0}.mainMenuList__link{display:block;padding:10px}.mainMenuList__dropDown{padding:20px;display:none}.footer .mainMenuList__dropDown,.sidebar .mainMenuList__dropDown,.slidingSidebar .mainMenuList__dropDown{-webkit-box-shadow:none;box-shadow:none}.mainMenuList__link__txt{color:$(typo.heading.fontClr)!important}.mainMenuList__dropDownIcon .icon{fill:$(typo.heading.fontClr)}.footer .mainMenuList__link__txt{color:$(footer.typo.heading.fontClr)!important}.footer .mainMenuList__dropDownIcon .icon{fill:$(footer.typo.heading.fontClr)}.slidingSidebar .mainMenuList__link__txt{color:$(slidingSidebar.body.text.color)!important}.slidingSidebar .mainMenuList__dropDownIcon .icon{fill:$(slidingSidebar.body.text.color)}.widget.AdSense{text-align:center}.cookie-choices-info{z-index:1000000000!important;background-color:rgba(0,0,0,.92)!important;top:auto!important;bottom:0!important}.profile-info{text-align:center}.profileImage{display:block;margin:0 auto 10px auto;width:150px;height:150px;border-radius:10000px;background-size:cover}.profile__nameAndLink{font-size:17px}.prfile__location{margin:5px 0 0 0}.prfile__about{margin-top:15px}.viewProfileLink{display:inline-block;font-size:80%;margin-top:5px}.teamMember .profileImage{margin:0 15px 0 0;width:70px;height:70px}.teamMember__name{font-size:17px}.teamMember{margin-bottom:10px}.teamMember:last-child{margin-bottom:0}.post{font-size:$(postBody.fontSize)}.post__title{margin-top:0;margin-bottom:$(post.title.marginBottom);color:$(post.title.clr);font-size:$(post.title.fontSize)}.post__data .data{color:$(post.data.clr)!important;font-size:$(post.data.fontSize)}.post__labels{margin:$(-1 * post.labels.spacing)}.post__label{font:$(tagCloudFont);display:block;color:$(post.labels.clr)!important;font-size:$(post.labels.fontSize);background-color:$(post.labels.BG);padding:$(post.labels.paddingTopBottom) $(post.labels.paddingLeftRight);margin:$(post.labels.spacing);border:$(post.labels.boderWidth) solid $(post.labels.borderClr);border-radius:$(post.labels.boderRadius);letter-spacing:$(post.labels.letterSpacing);text-transform:uppercase}.blogPosts .layout__unit{z-index:100;padding:$(postSummary.margin.v) $(postSummary.margin.h)!important}.post ol,.post ul{line-height:2}.post-body:after{content:'';display:block;clear:both}.postContainer{max-width:$(post.maxWidth)}.noSidebar .postContainer{margin-left:auto;margin-right:auto}.post__header{margin-bottom:$(post.header.marginBottom)}.post__footer{margin-top:50px}.post__sec{padding-bottom:70px}.post__sec:last-child{padding-bottom:0}.hideImages img{display:none}.PostReactions{padding-bottom:40px}.shareButtons{text-align:center;padding-top:40px;margin:$(-1 * shareButtons.spacing)}.shareButtons__link{display:block;line-height:1;background-color:$(shareButtons.BG)!important;border-radius:$(shareButtons.borderRadius);border:$(shareButtons.borderWidth) solid $(shareButtons.borderClr);padding:$(shareButtons.paddingTopBottom) $(shareButtons.paddingLeftRight);margin:$(shareButtons.spacing)}.shareButtons__icon{width:$(shareButtons.icons.size);height:$(shareButtons.icons.size);fill:$(shareButtons.icons.clr);display:block}.relatedPostsContainer{display:none}.comment{position:relative;margin-bottom:50px}.comment:last-child{margin-bottom:0}.comments ol{list-style:none;padding:0}.comment .avatar-image-container{position:absolute;top:0;left:0;height:45px;width:45px;border-radius:1000px;background:#eee;overflow:hidden}.comment .avatar-image-container img{width:100%}.comment-block,.comment-replies{padding-left:70px}.thread-chrome.thread-collapsed{display:none}.comment .user{font:$(hFont);display:block;font-size:17px;font-weight:700}.comment .user a{color:$(typo.heading.fontClr)}.comment .icon.user{display:none}.comment .datetime{display:inline-block;font-size:12px;padding-top:8px}.comment .datetime a{color:$(typo.data.fontClr)}.comment-content{margin:0;padding:15px 0 20px 0}.comment-actions{position:absolute;top:0;right:0}.comment-actions a,.comment-actions span{display:inline-block}.comment-actions a{display:inline-block;color:$(typo.data.fontClr);text-transform:capitalize;font-size:13px;margin-right:10px}.comment-actions span a{margin-right:0}.thread-toggle{margin-bottom:30px;line-height:1;display:block;cursor:pointer}.thread-toggle a{display:inline-block;padding:5px 0;color:$(typo.data.fontClr);font-size:15px;text-transform:uppercase}.thread-toggle span{display:inline-block;vertical-align:middle}.comment-replies .continue a{display:inline-block;padding:2px 5px;margin-top:20px;text-align:center;color:$(body.text.color);font-size:15px;text-transform:capitalize;border-bottom:1px solid $(typo.data.fontClr)}.thread-arrow{margin:5px}.comments__arrowIcon{-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg)}.comments__arrowIcon .icon{fill:$(typo.data.fontClr);width:12px;height:12px}.thread-toggle.thread-collapsed .comments__arrowIcon{-webkit-transform:rotate(0);-ms-transform:rotate(0);transform:rotate(0)}.hidden{display:none}.comments .loadmore{text-align:center;font-size:18px;text-transform:capitalize}.comment-footer{display:none}#comment-post-message{font-size:18px;margin:0;padding-bottom:30px;display:none}.comment-thread{margin-bottom:50px}.comments iframe{min-height:101px}.comments .comments-content .loadmore.loaded{max-height:0;opacity:0;overflow:hidden}.comments .loadmore.hidden{display:none}.comment-replies .comment-replies{display:none}.CSS_LIGHTBOX{z-index:100000000!important}.CSS_LAYOUT_COMPONENT.CSS_LIGHTBOX_ATTRIBUTION_INDEX_CONTAINER{display:none}.CSS_LIGHTBOX_BTN_CLOSE{background:0 0!important;width:30px!important;height:30px!important;border-radius:1000px;border:2px solid #fff}.CSS_LIGHTBOX_BTN_CLOSE:after,.CSS_LIGHTBOX_BTN_CLOSE:before{content:"";display:block;position:absolute;width:2px;height:20px;background-color:#fff;top:3px;left:12px}.CSS_LIGHTBOX_BTN_CLOSE:before{-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}.CSS_LIGHTBOX_BTN_CLOSE:after{-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg)}@media (max-width:991px){.postTop__title{font-size:36px}}@media (max-width:767px){.postTop__title{font-size:32px}}@media (max-width:575px){.postTop__title{font-size:28px}.postTop__timeAndComments{display:none}}.separator>a{display:block}.slick-slider{position:relative;display:block;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;-ms-touch-action:pan-y;touch-action:pan-y;-webkit-tap-highlight-color:transparent}.slick-list{position:relative;display:block;overflow:hidden;margin:0;padding:0}.slick-list:focus{outline:0}.slick-list.dragging{cursor:pointer;cursor:hand}.slick-slider .slick-list,.slick-slider .slick-track{-webkit-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.slick-track{position:relative;top:0;left:0;display:block;margin-left:auto;margin-right:auto}.slick-track:after,.slick-track:before{display:table;content:''}.slick-track:after{clear:both}.slick-loading .slick-track{visibility:hidden}.slick-slide{display:none;float:left;height:100%;min-height:1px}[dir=rtl] .slick-slide{float:right}.slick-slide img{display:block}.slick-slide.slick-loading img{display:none}.slick-slide.dragging img{pointer-events:none}.slick-initialized .slick-slide{display:block}.slick-loading .slick-slide{visibility:hidden}.slick-vertical .slick-slide{display:block;height:auto;border:1px solid transparent}.slick-arrow.slick-hidden{display:none}.slider{display:none}.slick-list,.slick-slide,.slick-slide>div,.slick-track{height:100%}.slick-slider{position:static}.slider{position:relative}.slider__aSlide{position:relative}.slider__BG{opacity:.5}.slider__arrow{position:absolute;z-index:10000;width:30px;height:30px;padding:10px;opacity:.5;cursor:pointer;border-radius:100px;background-color:$(body.BG);margin:0 5px}.container .slider__arrow_bottom .slider__arrow{margin:0}.slider__arrow_left{left:0}.slider__arrow_right{right:0}.slider__arrow svg{width:100%;height:100%;display:block;fill:$(typo.heading.fontClr)}.slider:hover .slider__arrow{opacity:1}.slider__arrow_middle .slider__arrow{top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}.slider__arrow_bottom .slider__arrow{border:1px solid $(typo.heading.fontClr)}.slick-dots{padding:0;margin:0;font-size:0;line-height:0;text-align:center;position:absolute;z-index:100;right:0;left:0}.slick-dots button{font-size:0;line-height:0;display:block;padding:12px 8px;cursor:pointer;color:transparent;border:0;outline:0;background:0 0}.slick-dots button:after{content:'';display:block;width:4px;height:4px;background-color:$(typo.heading.fontClr);opacity:.5;border-radius:100px;transition:all .3s ease;-webkit-transition:all .3s ease;-moz-transition:all .3s ease;-o-transition:all .3s ease}.slick-dots li{display:inline-block;margin:0 5px}.slick-dots button:hover:after,.slick-dots li.slick-active button:after{opacity:1}.slick-list{line-height:1}.slider__arrow_bottom .slider__arrow,.slider__dots_show .slick-dots{bottom:0}.slider__arrow_bottom,.slider__dots_show{padding-bottom:50px}.postTitle:after~.postData{color:red}.aComment{padding-bottom:20px;margin-bottom:20px;margin-left:-10px;margin-right:-10px}.aComment__imgCont{padding:0 10px}.aComment__outer{width:60px;height:60px;border-radius:100px;position:relative;overflow:hidden}.aComment__img{position:absolute;z-index:1000;top:0;left:0;width:100%;height:100%;-o-object-fit:cover;object-fit:cover}.aComment__content{padding:0 10px}.aComment__author{margin:0 0 5px 0;font-size:95%}.aComment__snippet{font-size:90%;margin:0}.featuredBlock{overflow:hidden}.featuredBlock,.layout__unit{width:100%}.featuredBlock_notLoaded{opacity:.9;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-name:changeOpacity;animation-name:changeOpacity;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;animation-direction:reverse;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out}@-webkit-keyframes changeOpacity{0%{opacity:.75}100%{opacity:1}}@keyframes changeOpacity{0%{opacity:.75}100%{opacity:1}}.featuredBlock_notLoaded .postThumb__img{display:none}.featuredBlock_notLoaded a{pointer-events:none;cursor:default}.featuredBlock_notLoaded .data__part,.featuredBlock_notLoaded .postLabel,.featuredBlock_notLoaded .postTitle__link{color:transparent!important}.featuredBlock_notLoaded .postSnippet{display:none}.featuredBlock_notLoaded .postThumb{background-color:$(blkPreLoader.clr1)}.featuredBlock_notLoaded .overlayN:after{opacity:0!important}.featuredBlock_notLoaded .postLabel{height:10px;background-color:$(blkPreLoader.clr1)}.featuredBlock_notLoaded .postTitle__link{background-color:$(blkPreLoader.clr1);height:15px}.featuredBlock_notLoaded .data__part{background-color:$(blkPreLoader.clr1);height:10px;width:120px;margin-right:10px}.featuredBlock_notLoaded .data__part:last-child{margin-right:0}.featuredBlock_notLoaded .imgBG .postLabel{background-color:$(blkPreLoader.clr2)}.featuredBlock_notLoaded .imgBG .postTitle__link{background-color:$(blkPreLoader.clr2)}.featuredBlock_notLoaded .imgBG .data__part{background-color:$(blkPreLoader.clr2)}.postWithImgBG{position:relative}.postWithImgBG__content{padding:30px;position:absolute;z-index:10000;left:0;bottom:0;width:100%}.postWithImgBG .overlayN:after{opacity:.2;visibility:visible}.postWithImgBG .overlayN:hover:after{opacity:.25;visibility:visible}.postWithImgBG__title{font-size:20px}.preview .c-resPost-250,.preview .c-resPost-400,.preview .c-resPost-lg,.preview .c-resPost-md,.preview .c-resPost-sm,.preview .c-resPost-xs{z-index:10000}.resPost-lg .postWithImgBG__title{font-size:$(fpTitle.fontSize.lg)}.resPost-md .postWithImgBG__title{font-size:$(fpTitle.fontSize.md)}.resPost-sm .postWithImgBG__title{font-size:$(fpTitle.fontSize.sm)}.resPost-xs .postWithImgBG__title{font-size:$(fpTitle.fontSize.xs)}.resPost-400 .postWithImgBG__title{font-size:$(fpTitle.fontSize.xxs)}.resPost-250 .postWithImgBG__title{font-size:$(fpTitle.fontSize.xxxs)}.resPost-lg .postCard__title{font-size:32px}.resPost-md .postCard__title{font-size:26px}.resPost-sm .postCard__title{font-size:20px}.resPost-xs .postCard__title{font-size:18px}.resPost-400 .postCard__title{font-size:16px}.fBlk1__col1{width:60%}.fBlk1__col2{width:40%}.fBlk1__col2 .postWithImgBG .postThumb{padding-top:0;height:100%}.fBlk1__col2 .postWithImgBG,.fBlk1__col2 .thumbWrapper{height:100%}.fBlk1__2{width:100%}.resCont-sm .fBlk1__col1,.resCont-sm .fBlk1__col2{width:100%}.resCont-sm .fBlk1__col2 .postWithImgBG .postThumb{padding-top:65%}.resCont-sm .fBlk1__2{width:50%}.resCont-xs .fBlk1__2{width:100%}.fBlk2__2{width:50%}.fBlk2__3{width:33.3333%}.resCont-sm .fBlk2__2,.resCont-sm .fBlk2__3{width:100%}.fBlk3__col1,.fBlk3__col2{width:50%}.fBlk3__4{width:50%}.resCont-md .fBlk3__col1,.resCont-md .fBlk3__col2{width:100%}.resCont-xs .fBlk3__4{width:100%}.fBlk4__col2{width:50%}.fBlk4__col1{width:25%}.fBlk4__1,.fBlk4__2{width:100%}.resCont-md .fBlk4__col1,.resCont-md .fBlk4__col2{width:100%}.resCont-md .fBlk4__2{width:50%}.resCont-sm .fBlk4__2{width:100%}.slider2 .slider__arrow__icon{width:25px;height:25px}.slider3 .slider__arrow__icon{width:25px;height:25px}.slider4 .slider__arrow__icon{width:25px;height:25px}.slider5 .slider__arrow__icon{width:20px;height:20px}.slider5 .postData,.slider5 .postLabelCont{display:none}.slider6 .slider__arrow__icon{width:20px;height:20px}.slider6 .postData,.slider6 .postLabelCont{display:none}.layout__1 .layout__unit{width:100%}.layout__2 .layout__unit{width:50%}.layout__3 .layout__unit{width:33.333333%}.layout__4 .layout__unit{width:25%}.layout__5 .layout__unit{width:20%}.layout__6 .layout__unit{width:16.66666%}.resCont-sm .layout__4 .layout__unit{width:50%}.resCont-sm .layout__5 .layout__unit{width:50%}.resCont-sm .layout__6 .layout__unit{width:33.3333%}.resCont-xs .layout__2 .layout__unit,.resCont-xs .layout__3 .layout__unit,.resCont-xs .layout__4 .layout__unit,.resCont-xs .layout__5 .layout__unit,.resCont-xs .layout__6 .layout__unit{width:100%}.slick-list{overflow:hidden}.layout__xsGap,.slider.layout__xsGap .slick-list{margin:-2px}.layout__smGap,.slider.layout__smGap .slick-list{margin:-4px}.layout__mdGap,.slider.layout__mdGap .slick-list{margin:-8px}.layout__lgGap,.slider.layout__lgGap .slick-list{margin:-16px}.layout__xsGap .layout__unit{padding:2px}.layout__smGap .layout__unit{padding:4px}.layout__mdGap .layout__unit{padding:8px}.layout__lgGap .layout__unit{padding:16px}.slider.layout__xsGap{margin:0}.slider.layout__smGap{margin:0}.slider.layout__mdGap{margin:0}.slider.layout__lgGap{margin:0}.layout__xsHeight .postThumb{padding-top:50%}.layout__smHeight .postThumb{padding-top:65%}.layout__mdHeight .postThumb{padding-top:100%}.layout__lgHeight .postThumb{padding-top:120%}.layout__xlHeight .postThumb{padding-top:135%}.postCenterContentV .postHCard .row,.postCenterContentV.postHCard .row{-ms-flex-align:center!important;-webkit-box-align:center!important;align-items:center!important}.postCenterContentH{text-align:center}.postCenterContentV .postWithImgBG__content{bottom:50%;left:50%;-webkit-transform:translate(-50%,50%);-ms-transform:translate(-50%,50%);transform:translate(-50%,50%)}.viewAll__link{display:block;border-style:solid;color:$(viewAll.clr)!important;font:$(bodyFont);font-size:$(viewAll.fontSize);background-color:$(viewAll.BG);padding:$(viewAll.paddingTopBottom) $(viewAll.paddingRight) $(viewAll.paddingTopBottom) $(viewAll.paddingLeft);letter-spacing:$(viewAll.letterSpacing);border-width:$(viewAll.borderWidth);border-color:$(viewAll.borderClr);border-radius:$(viewAll.borderRadius);text-transform:none}.viewAll__bottom .viewAll,.viewAll__bottomCenter .viewAll{margin-top:$(viewAll.marginTop)}.blockTitle .viewAll{position:absolute;z-index:100;right:0;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}.featuredBlock .data__auther{pointer-events:none;cursor:default}.isDraft{pointer-events:none}.isDraft .thumbWrapper:after{display:block;content:'Draft post: Seen by authors only.';position:absolute;top:15px;left:15px;padding:6px 16px;background-color:#c5d052;color:#fff;border:1px solid #fff;opacity:.92;font-size:12px;z-index:100;border-radius:100px}.blockTitle{margin-top:0;position:relative;z-index:1;line-height:1;text-transform:none;text-align:initial}.blockTitle:after{content:"";display:block;width:100%;position:absolute;z-index:10;left:0;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}.blockTitle__txt{position:relative;z-index:100;border-style:solid;border-width:0;display:inline-block}.topSection .blockTitle{margin-bottom:$(topSectionBlockTitle.marginBottom)}.topSection .blockTitle .blockTitle__txt{color:$(topSectionBlockTitle.clr);font-size:$(topSectionBlockTitle.fontSize);letter-spacing:$(topSectionBlockTitle.letterSpacing);background-color:$(topSectionBlockTitle.BG);padding:$(topSectionBlockTitle.paddingTopBottom) 0;padding-left:$(topSectionBlockTitle.paddingLeft);padding-right:$(topSectionBlockTitle.paddingRight);border-width:$(topSectionBlockTitle.borderWidth);border-color:$(topSectionBlockTitle.borderClr);border-radius:$(topSectionBlockTitle.borderRadius)}.topSection .blockTitle:after{height:$(topSectionBlockTitle.middleLine.width);background-color:$(topSectionBlockTitle.middleLine.clr)}.topSectionBlockTitle__txtAlignCenter .topSection .blockTitle{text-align:center}.home .mainFeed .blockTitle{margin-bottom:$(mainContentBlockTitle.marginBottom)}.home .mainFeed .blockTitle .blockTitle__txt{color:$(mainContentBlockTitle.clr);font-size:$(mainContentBlockTitle.fontSize);letter-spacing:$(mainContentBlockTitle.letterSpacing);background-color:$(mainContentBlockTitle.BG);padding:$(mainContentBlockTitle.paddingTopBottom) 0;padding-left:$(mainContentBlockTitle.paddingLeft);padding-right:$(mainContentBlockTitle.paddingRight);border-width:$(mainContentBlockTitle.borderWidth);border-color:$(mainContentBlockTitle.borderClr);border-radius:$(mainContentBlockTitle.borderRadius)}.home .mainFeed .blockTitle:after{height:$(mainContentBlockTitle.middleLine.width);background-color:$(mainContentBlockTitle.middleLine.clr)}.home.mainContentBlockTitle__txtAlignCenter .mainFeed .blockTitle{text-align:center}.sidebar .blockTitle{margin-bottom:$(sidebarWidgetTitle.marginBottom)}.sidebar .blockTitle .blockTitle__txt{color:$(sidebarWidgetTitle.clr);font-size:$(sidebarWidgetTitle.fontSize);letter-spacing:$(sidebarWidgetTitle.letterSpacing);background-color:$(sidebarWidgetTitle.BG);padding:$(sidebarWidgetTitle.paddingTopBottom) 0;padding-left:$(sidebarWidgetTitle.paddingLeft);padding-right:$(sidebarWidgetTitle.paddingRight);border-width:$(sidebarWidgetTitle.borderWidth);border-color:$(sidebarWidgetTitle.borderClr);border-radius:$(sidebarWidgetTitle.borderRadius)}.sidebar .blockTitle:after{height:$(sidebarWidgetTitle.middleLine.width);background-color:$(sidebarWidgetTitle.middleLine.clr)}.sidebarWidgetTitle__txtAlignCenter .sidebar .blockTitle{text-align:center}.footer .blockTitle{margin-bottom:$(footerWidgetTitle.marginBottom)}.footer .blockTitle .blockTitle__txt{color:$(footerWidgetTitle.clr);font-size:$(footerWidgetTitle.fontSize);letter-spacing:$(footerWidgetTitle.letterSpacing);background-color:$(footerWidgetTitle.BG);padding:$(footerWidgetTitle.paddingTopBottom) 0;padding-left:$(footerWidgetTitle.paddingLeft);padding-right:$(footerWidgetTitle.paddingRight);border-width:$(footerWidgetTitle.borderWidth);border-color:$(footerWidgetTitle.borderClr);border-radius:$(footerWidgetTitle.borderRadius)}.footer .blockTitle:after{height:$(footerWidgetTitle.middleLine.width);background-color:$(footerWidgetTitle.middleLine.clr)}.footerWidgetTitle__txtAlignCenter .footer .blockTitle{text-align:center}.slidingSidebar .blockTitle{margin-bottom:$(slidingSidebarWidgetTitle.marginBottom)}.slidingSidebar .blockTitle .blockTitle__txt{color:$(slidingSidebarWidgetTitle.clr);font-size:$(slidingSidebarWidgetTitle.fontSize);letter-spacing:$(slidingSidebarWidgetTitle.letterSpacing);background-color:$(slidingSidebarWidgetTitle.BG);padding:$(slidingSidebarWidgetTitle.paddingTopBottom) 0;padding-left:$(slidingSidebarWidgetTitle.paddingLeft);padding-right:$(slidingSidebarWidgetTitle.paddingRight);border-width:$(slidingSidebarWidgetTitle.borderWidth);border-color:$(slidingSidebarWidgetTitle.borderClr);border-radius:$(slidingSidebarWidgetTitle.borderRadius)}.slidingSidebar .blockTitle:after{height:$(slidingSidebarWidgetTitle.middleLine.width);background-color:$(slidingSidebarWidgetTitle.middleLine.clr)}.slidingSidebarWidgetTitle__txtAlignCenter .slidingSidebar .blockTitle{text-align:center}.relatedPosts .blockTitle{margin-bottom:$(relatedPostsTitle.marginBottom)}.relatedPosts .blockTitle .blockTitle__txt{color:$(relatedPostsTitle.clr);font-size:$(relatedPostsTitle.fontSize);letter-spacing:$(relatedPostsTitle.letterSpacing);background-color:$(relatedPostsTitle.BG);padding:$(relatedPostsTitle.paddingTopBottom) 0;padding-left:$(relatedPostsTitle.paddingLeft);padding-right:$(relatedPostsTitle.paddingRight);border-width:$(relatedPostsTitle.borderWidth);border-color:$(relatedPostsTitle.borderClr);border-radius:$(relatedPostsTitle.borderRadius)}.relatedPosts .blockTitle:after{height:$(relatedPostsTitle.middleLine.width);background-color:$(relatedPostsTitle.middleLine.clr)}.relatedPostsTitle__txtAlignCenter .relatedPosts .blockTitle{text-align:center}.comments .blockTitle{margin-bottom:$(commentsTitle.marginBottom)}.comments .blockTitle .blockTitle__txt{color:$(commentsTitle.clr);font-size:$(commentsTitle.fontSize);letter-spacing:$(commentsTitle.letterSpacing);background-color:$(commentsTitle.BG);padding:$(commentsTitle.paddingTopBottom) 0;padding-left:$(commentsTitle.paddingLeft);padding-right:$(commentsTitle.paddingRight);border-width:$(commentsTitle.borderWidth);border-color:$(commentsTitle.borderClr);border-radius:$(commentsTitle.borderRadius)}.comments .blockTitle:after{height:$(commentsTitle.middleLine.width);background-color:$(commentsTitle.middleLine.clr)}.commentsTitle__txtAlignCenter .comments .blockTitle{text-align:center}.fBlockTxtTrans__cap .mainFeed .blockTitle,.fBlockTxtTrans__cap .topSection .blockTitle{text-transform:capitalize}.fBlockTxtTrans__up .mainFeed .blockTitle,.fBlockTxtTrans__up .topSection .blockTitle{text-transform:uppercase}.widgetsTxtTrans__cap .footer .blockTitle,.widgetsTxtTrans__cap .sidebar .blockTitle,.widgetsTxtTrans__cap .slidingSidebar .blockTitle{text-transform:capitalize}.widgetsTxtTrans__up .footer .blockTitle,.widgetsTxtTrans__up .sidebar .blockTitle,.widgetsTxtTrans__up .slidingSidebar .blockTitle{text-transform:uppercase}.SocialButtons__linkClr svg{fill:$(typo.link.fontClr)}.SocialButtons__linkClr .SocialButtons__el{border-color:$(typo.link.fontClr);background-color:$(typo.link.fontClr);color:$(typo.link.fontClr)!important}.SocialButtons__txtClr svg{fill:$(typo.heading.fontClr)}.SocialButtons__txtClr .SocialButtons__el{border-color:$(typo.heading.fontClr);background-color:$(typo.heading.fontClr);color:$(typo.heading.fontClr)!important}.header .SocialButtons__txtClr svg{fill:$(nav.iconClr)}.header .SocialButtons__txtClr .SocialButtons__el{border-color:$(nav.txtClr);background-color:$(nav.txtClr);color:$(nav.txtClr)!important}.header .openCloseMod__ele .SocialButtons__txtClr svg{fill:$(nav.dropDown.txtColor)}.header .openCloseMod__ele .SocialButtons__txtClr .SocialButtons__el{border-color:$(nav.dropDown.txtColor);background-color:$(nav.dropDown.txtColor);color:$(nav.dropDown.txtColor)!important}.footer .SocialButtons__txtClr svg{fill:$(footer.typo.heading.fontClr)}.footer .SocialButtons__txtClr .SocialButtons__el{border-color:$(footer.typo.heading.fontClr);background-color:$(footer.typo.heading.fontClr);color:$(footer.typo.heading.fontClr)!important}.slidingSidebar .SocialButtons__txtClr svg{fill:$(slidingSidebar.typo.heading.clr)}.slidingSidebar .SocialButtons__txtClr .SocialButtons__el{border-color:$(slidingSidebar.typo.heading.clr);background-color:$(slidingSidebar.typo.heading.clr);color:$(slidingSidebar.typo.heading.clr)!important}.SocialButtons__originalClr .SocialButtons__artstation svg{fill:#13aff0}.SocialButtons__originalClr .SocialButtons__artstation.SocialButtons__el{border-color:#13aff0;background-color:#13aff0;color:#13aff0}.SocialButtons__originalClr .SocialButtons__behance svg{fill:#053eff}.SocialButtons__originalClr .SocialButtons__behance.SocialButtons__el{border-color:#053eff;background-color:#053eff;color:#053eff}.SocialButtons__originalClr .SocialButtons__deviantart svg{fill:#05cc47}.SocialButtons__originalClr .SocialButtons__deviantart.SocialButtons__el{border-color:#05cc47;background-color:#05cc47;color:#05cc47}.SocialButtons__originalClr .SocialButtons__dribbble svg{fill:#ea4c89}.SocialButtons__originalClr .SocialButtons__dribbble.SocialButtons__el{border-color:#ea4c89;background-color:#ea4c89;color:#ea4c89}.SocialButtons__originalClr .SocialButtons__email svg{fill:#d44638}.SocialButtons__originalClr .SocialButtons__email.SocialButtons__el{border-color:#d44638;background-color:#d44638;color:#d44638}.SocialButtons__originalClr .SocialButtons__facebook svg{fill:#1877f2}.SocialButtons__originalClr .SocialButtons__facebook.SocialButtons__el{border-color:#1877f2;background-color:#1877f2;color:#1877f2}.SocialButtons__originalClr .SocialButtons__flickr svg{fill:#f40083}.SocialButtons__originalClr .SocialButtons__flickr.SocialButtons__el{border-color:#f40083;background-color:#f40083;color:#f40083}.SocialButtons__originalClr .SocialButtons__instagram svg{fill:#c32aa3}.SocialButtons__originalClr .SocialButtons__instagram.SocialButtons__el{border-color:#c32aa3;background-color:#c32aa3;color:#c32aa3}.SocialButtons__originalClr .SocialButtons__kofi svg{fill:#ff5e5b}.SocialButtons__originalClr .SocialButtons__kofi.SocialButtons__el{border-color:#ff5e5b;background-color:#ff5e5b;color:#ff5e5b}.SocialButtons__originalClr .SocialButtons__medium svg{fill:#02b875}.SocialButtons__originalClr .SocialButtons__medium.SocialButtons__el{border-color:#02b875;background-color:#02b875;color:#02b875}.SocialButtons__originalClr .SocialButtons__pinterest svg{fill:#c8232c}.SocialButtons__originalClr .SocialButtons__pinterest.SocialButtons__el{border-color:#c8232c;background-color:#c8232c;color:#c8232c}.SocialButtons__originalClr .SocialButtons__messenger svg{fill:#0084ff}.SocialButtons__originalClr .SocialButtons__messenger.SocialButtons__el{border-color:#0084ff;background-color:#0084ff;color:#0084ff}.SocialButtons__originalClr .SocialButtons__quora svg{fill:#a20}.SocialButtons__originalClr .SocialButtons__quora.SocialButtons__el{border-color:#a20;background-color:#a20;color:#a20}.SocialButtons__originalClr .SocialButtons__redbubble svg{fill:#e41321}.SocialButtons__originalClr .SocialButtons__redbubble.SocialButtons__el{border-color:#e41321;background-color:#e41321;color:#e41321}.SocialButtons__originalClr .SocialButtons__reddit svg{fill:#ff5700}.SocialButtons__originalClr .SocialButtons__reddit.SocialButtons__el{border-color:#ff5700;background-color:#ff5700;color:#ff5700}.SocialButtons__originalClr .SocialButtons__snapchat svg{fill:#000}.SocialButtons__originalClr .SocialButtons__snapchat.SocialButtons__el{border-color:#000;background-color:#000;color:#000}.SocialButtons__originalClr .SocialButtons__spotify svg{fill:#1ed760}.SocialButtons__originalClr .SocialButtons__spotify.SocialButtons__el{border-color:#1ed760;background-color:#1ed760;color:#1ed760}.SocialButtons__originalClr .SocialButtons__tumblr svg{fill:#35465d}.SocialButtons__originalClr .SocialButtons__tumblr.SocialButtons__el{border-color:#35465d;background-color:#35465d;color:#35465d}.SocialButtons__originalClr .SocialButtons__twitch svg{fill:#9146ff}.SocialButtons__originalClr .SocialButtons__twitch.SocialButtons__el{border-color:#9146ff;background-color:#9146ff;color:#9146ff}.SocialButtons__originalClr .SocialButtons__twitter svg{fill:#1da1f2}.SocialButtons__originalClr .SocialButtons__twitter.SocialButtons__el{border-color:#1da1f2;background-color:#1da1f2;color:#1da1f2}.SocialButtons__originalClr .SocialButtons__vimeo svg{fill:#1ab7ea}.SocialButtons__originalClr .SocialButtons__vimeo.SocialButtons__el{border-color:#1ab7ea;background-color:#1ab7ea;color:#1ab7ea}.SocialButtons__originalClr .SocialButtons__vk svg{fill:#4a76a8}.SocialButtons__originalClr .SocialButtons__vk.SocialButtons__el{border-color:#4a76a8;background-color:#4a76a8;color:#4a76a8}.SocialButtons__originalClr .SocialButtons__whatsapp svg{fill:#25d366}.SocialButtons__originalClr .SocialButtons__whatsapp.SocialButtons__el{border-color:#25d366;background-color:#25d366;color:#25d366}.SocialButtons__originalClr .SocialButtons__youtube svg{fill:red}.SocialButtons__originalClr .SocialButtons__youtube.SocialButtons__el{border-color:red;background-color:red;color:red}.SocialButtons__el{display:block;padding:10px;font-size:13px;text-transform:uppercase;letter-spacing:1px;text-align:center;border-style:solid;border-width:0;margin:7px}.SocialButtons{-ms-flex-wrap:wrap;flex-wrap:wrap;margin:-7px}.SocialButtons__el svg{width:20px;height:20px;display:block}.header .SocialButtons{-ms-flex-wrap:nowrap;flex-wrap:nowrap}.header .SB__hCardStyle{-ms-flex-wrap:wrap;flex-wrap:wrap}.SocialButtons.SocialButtonsStyle1{margin:0}.SocialButtonsStyle1 .SocialButtons__el{background-color:transparent!important;margin:0}.SocialButtonsStyle2 .SocialButtons__el{padding:8px}.SocialButtonsStyle2 .SocialButtons__el svg{width:15px;height:15px}.SocialButtonsStyle2 .SocialButtons__el{background-color:transparent!important;border-width:2px;border-style:solid;border-radius:100px}.SocialButtonsStyle3 .SocialButtons__el{border-radius:100px}.SocialButtonsStyle3 svg{fill:#fff!important;width:18px;height:18px}.SocialButtonsStyle4 .SocialButtons__el{background-color:transparent!important;border-width:2px;border-style:solid;padding:8px}.SocialButtonsStyle5 svg{fill:#fff!important;width:18px;height:18px}.SB__vCardStyle .SocialButtons__el{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.SB__vCardStyle svg{width:18px;height:18px}.SB__vCardStyle .SocialButtons__followersTxt{font-size:70%}.SB__vCardStyle .SocialButtons__followersCount,.SB__vCardStyle .SocialButtons__followersTxt{margin-top:2px;display:block}.SocialButtonsStyle6 .SocialButtons__el{background-color:transparent!important;border-width:2px}.SocialButtonsStyle7 .SocialButtons__el{color:#fff!important}.SocialButtonsStyle7 svg{fill:#fff!important}.SocialButtonsStyle8 .SocialButtons__el{background-color:transparent!important;border-width:2px}.SocialButtonsStyle9 .SocialButtons__el{color:#fff!important}.SocialButtonsStyle9 svg{fill:#fff!important}.SB__hCardStyle{max-width:350px}.SB__hCardStyle .SocialButtons__el{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;margin-bottom:5px;padding:10px 15px}.SB__hCardStyle svg{width:18px;height:18px}.SB__hCardStyle .SocialButtons__followersTxt{font-size:70%}.SB__hCardStyle .SocialButtons__followersCount,.SB__hCardStyle .SocialButtons__followersTxt{margin:0 4px}.SB__hCardStyle .SocialButtons__followersInfo{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.SocialButtonsStyle10 .SocialButtons__el{background-color:transparent!important}.SocialButtonsStyle11 .SocialButtons__el{background-color:transparent!important;border-width:2px}.SocialButtonsStyle12 .SocialButtons__el{color:#fff!important}.SocialButtonsStyle12 svg{fill:#fff!important}
+
+.postThumb
+{
+    border-radius: 8px;
+}img
+{
+border-radius: 8px;
+}]]></b:skin>
+</b:if>
+<b:template-skin>
+<![CDATA[
+
+body#layout .logoCon {
+	width: 50%;
+}
+body#layout .header__inner  {
+	display: flex;
+}
+body#layout .header__inner .section  {
+	width: 33.333%;
+}
+body#layout .mainFeed {
+	width: 65%;
+	float: left;
+}
+body#layout .sidebar {
+	width: 35%;
+	float: left;
+}
+
+body#layout .footerCol {
+	width: 50%;
+	float: left;
+}
+body#layout .footerBottom {
+	clear: both;
+}
+
+body#layout .slidingSidebar {
+	width: 50%;
+}
+
+/*clears*/
+body#layout .headerTop:after,
+body#layout .headerBottom:after,
+body#layout .mainContent:after,
+body#layout .footerTop:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+body#layout .header,
+body#layout .topSection,
+body#layout .mainContent,
+body#layout .footer {
+	padding-bottom: 30px;
+}
+]]>
